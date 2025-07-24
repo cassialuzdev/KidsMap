@@ -1,0 +1,43 @@
+---
+
+Ótimo! Vamos refazer a **descrição completa** para o seu GitHub, integrando o conceito do **KidsMap** como um "mapa" para o direcionamento do desenvolvimento infantil.
+
+---
+
+# KidsMap: Checklist de Observação Infantil – Perfil Comportamental (0 a 4 anos)
+
+O **KidsMap** é um checklist interativo, desenvolvido em HTML, CSS e JavaScript, criado para ser seu **mapa no complexo universo do desenvolvimento infantil**. Ele auxilia pais e educadores na observação de padrões comportamentais em crianças de 0 a 4 anos.
+
+Ao preencher o checklist, você obtém uma **clareza essencial** que pode indicar tendências para perfis como **TDAH, TEA, Altas Habilidades/Superdotação (AHSD) ou a combinação TDAH + AHSD**. Mais do que um simples diagnóstico, o KidsMap oferece um **direcionamento inicial**, ajudando a **traçar o caminho** para a busca de tratamento e acompanhamento mais adequados e personalizados para cada criança.
+
+---
+
+## Funcionalidades Chave:
+
+* **Seu Mapa Interativo:** Interface simples e intuitiva com opções de seleção para cada pergunta, facilitando o mapeamento do comportamento.
+* **Rotas Claras:** O botão "Ver Meu Perfil" calcula e exibe instantaneamente os resultados, mostrando as tendências e destacando as interpretações relevantes.
+* **Visão Abrangente:** Quantifica as respostas por perfil (A, B, C, D) e as apresenta de forma clara, ajudando a entender as áreas de atenção.
+* **Guias de Direcionamento:** Cada perfil vem com descrições detalhadas e **sugestões de intervenções e rotinas recomendadas**, funcionando como passos iniciais no seu mapa.
+* **Flexibilidade:** Desenvolvido em HTML/CSS para ser facilmente visualizado em diferentes dispositivos (desktop e mobile).
+* **Código Aberto:** Uma base flexível para quem deseja explorar, personalizar ou contribuir com o projeto.
+
+---
+
+## Como Usar o KidsMap:
+
+1.  Clone ou baixe o repositório para o seu dispositivo.
+2.  Abra o arquivo `index.html` no seu navegador preferido.
+3.  Preencha o checklist selecionando as opções que melhor descrevem o comportamento da criança observada.
+4.  Clique no botão "Ver Meu Perfil" para receber os resultados e a interpretação que servirão como seu mapa inicial.
+
+---
+
+**⚠️ Importante:** O KidsMap é uma **ferramenta indicativa** e um **ponto de partida para a clareza**. Ele **não substitui de forma alguma a avaliação e o diagnóstico** realizados por profissionais qualificados da saúde e educação (psicólogos, psicopedagogos, terapeutas ocupacionais, fonoaudiólogos, médicos, entre outros). Use-o como um aliado para iniciar conversas informadas e buscar o suporte certo.
+
+---
+
+## Contribua para o Nosso Mapa:
+
+O KidsMap está em constante evolução. Sinta-se à vontade para explorar o código, sugerir melhorias ou contribuir com novas funcionalidades para tornar este mapa ainda mais útil para pais e educadores!
+
+---
