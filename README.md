@@ -82,7 +82,7 @@
     <li>Clone ou baixe o repositório.</li>
     <li>Abra o arquivo <code>index.html</code> no navegador.</li>
     <li>Marque as opções que melhor representam o comportamento observado na criança.</li>
-    <li>Clique em "Ver Meu Perfil" para visualizar resultados e orientações iniciais.</li>
+    <li>Clique em "🧩 Mapear Perfil" para visualizar resultados e orientações iniciais.</li>
   </ol>
 
   <h2>⚠️ Importante</h2>
