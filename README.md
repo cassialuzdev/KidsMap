@@ -1,4 +1,3 @@
-```markdown
 KidsMap: Checklist de Observação Infantil – Perfil Comportamental (0 a 4 anos)
 
 Um checklist HTML interativo para pais, educadores e profissionais da saúde mental que atua como um mapa prático para a observação do desenvolvimento infantil (0-4 anos). Facilita a identificação precoce de padrões comportamentais relacionados a TDAH, TEA, AHSD ou a combinação TDAH + AHSD, promovendo encaminhamentos e acompanhamentos adequados.
@@ -48,4 +47,3 @@ O KidsMap está em constante evolução. Convidamos você a explorar, melhorar e
 ---
 
 Obrigado por colaborar para um cuidado mais atento e precoce ao desenvolvimento infantil!
-```
