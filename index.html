@@ -1,3 +1,47 @@
+ <style>
+    /* Estilo do menu fixo superior */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #fefefe;
+      border-bottom: 1px solid #ddd;
+      padding: 12px 16px;
+      text-align: center;
+      font-family: "Segoe UI", sans-serif;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.2s, border-bottom 0.2s;
+    }
+
+    nav a:hover {
+      color: #005f73;
+      border-bottom: 2px solid #005f73;
+    }
+
+    /* Espaço para o conteúdo não ficar escondido atrás do menu fixo */
+    body {
+      margin: 0;
+      padding-top: 60px;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">🏠 Checklist</a> |
+    <a href="fundamentacao.html">🔬 Fundamentação</a> |
+    <a href="readme.html">📘 Sobre</a>
+  </nav>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
