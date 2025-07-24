@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checklist de Observação Infantil – Perfil Comportamental (Gameficado)</title>
+    <title>✅ KidsMap: Checklist de Observação Infantil – Perfil Comportamental (0 a 4 anos)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,7 +14,7 @@
             padding: 20px;
             background-color: #f4f7f6;
         }
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             color: #007bff; /* Azul primário */
             text-align: center;
             margin-bottom: 20px;
@@ -34,6 +34,13 @@
             font-size: 1.3em;
             margin-top: 30px;
             color: #ffc107; /* Amarelo primário */
+        }
+        h4 {
+            text-align: left;
+            font-size: 1.1em;
+            color: #343a40;
+            margin-top: 25px;
+            margin-bottom: 15px;
         }
         .instructions, .note {
             background-color: #e6f2ff; /* Tom mais claro de azul */
@@ -62,7 +69,7 @@
         }
         .question label {
             display: flex;
-            align-items: center;
+            align-items: flex-start; /* Alinha o texto ao topo do radio */
             margin-bottom: 10px;
             cursor: pointer;
             padding: 8px 0;
@@ -74,8 +81,10 @@
         }
         .question input[type="radio"] {
             margin-right: 12px;
+            margin-top: 4px; /* Ajusta a posição vertical do radio button */
             transform: scale(1.2); /* Aumenta o tamanho do radio button */
             accent-color: #28a745; /* Cor verde para os radio buttons */
+            flex-shrink: 0; /* Evita que o radio button encolha */
         }
         .calculate-button {
             display: block;
@@ -104,7 +113,7 @@
             margin-bottom: 40px;
             background-color: #fff;
             border-radius: 8px;
-            overflow: hidden; /* Garante que as bordas arredondadas funcionem com overflow */
+            overflow: hidden;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         table, th, td {
@@ -137,17 +146,26 @@
             border-left: 6px solid;
             border-radius: 5px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            display: none; /* Escondido por padrão */
         }
-        .interpretation-item.tdah { border-color: #dc3545; } /* Vermelho para TDAH */
-        .interpretation-item.tea { border-color: #17a2b8; }  /* Ciano para TEA */
-        .interpretation-item.ahsd { border-color: #ffc107; } /* Amarelo para AHSD */
-        .interpretation-item.tdah-ahsd { border-color: #6f42c1; } /* Roxo para TDAH+AHSD */
+        /* Cores das barras laterais para cada perfil */
+        .interpretation-item.tdah { border-color: #dc3545; } /* Vermelho */
+        .interpretation-item.tea { border-color: #17a2b8; }  /* Ciano */
+        .interpretation-item.ahsd { border-color: #ffc107; } /* Amarelo */
+        .interpretation-item.tdah-ahsd { border-color: #6f42c1; } /* Roxo */
+        .interpretation-item.tdah-tea { border-color: #fd7e14; } /* Laranja */
 
         .interpretation-item h3 {
             margin-top: 0;
             text-align: left;
             font-size: 1.4em;
             margin-bottom: 10px;
+            color: inherit; /* Herda a cor da barra lateral ou padrão */
+        }
+        .interpretation-item h3 span {
+            font-size: 0.9em;
+            font-weight: normal;
+            color: #555;
         }
         .interpretation-item ul {
             list-style-type: disc;
@@ -166,203 +184,276 @@
 
     <div class="page-break"></div>
 
-    <h1>✅ Checklist de Observação Infantil<br>– Perfil Comportamental (0 a 4 anos)</h1>
+    <h1>✅ KidsMap: Checklist de Observação Infantil<br>– Perfil Comportamental (0 a 4 anos)</h1>
 
     <div class="instructions">
         <p><strong>Instruções:</strong></p>
-        <p>Marque apenas *uma alternativa por pergunta*. Ao final, clique em "Ver Meu Perfil" para calcular os resultados. O total de cada letra (A, B, C ou D) será exibido na tabela e a interpretação correspondente será destacada.</p>
-        <p class="note">*Este material é apenas indicativo e não substitui avaliação profissional.*</p>
+        <p>Marque apenas *uma alternativa por pergunta*. Ao final, clique em "Ver Meu Perfil" para calcular os resultados. O total de cada letra (A, B, C, D ou E) será exibido na tabela e a interpretação correspondente será destacada.</p>
+        <p class="note"><em>Este material tem caráter informativo e não substitui avaliação clínica ou pedagógica profissional.</em></p>
     </div>
 
     <hr>
 
     <div class="question">
-        <p>1. Como é o padrão de sono da criança?</p>
-        <label><input type="radio" name="q1" value="A"> <b>A)</b> Acorda várias vezes, tem dificuldade para dormir, parece inquieta.</label>
-        <label><input type="radio" name="q1" value="B"> <b>B)</b> Dorme pouco ou demais; às vezes acorda no meio da noite e parece desorientada.</label>
-        <label><input type="radio" name="q1" value="C"> <b>C)</b> Dorme pouco, mas acorda bem-disposta e ativa.</label>
-        <label><input type="radio" name="q1" value="D"> <b>D)</b> Dorme pouco, é inquieta e tem muita energia logo ao acordar.</label>
+        <h4>1. Como é o padrão de sono da criança?</h4>
+        <label><input type="radio" name="q1" value="A"> <b>A)</b> Acorda várias vezes, resiste a dormir, parece sempre agitada.</label>
+        <label><input type="radio" name="q1" value="B"> <b>B)</b> Dorme em horários imprevisíveis ou em excesso; acorda desorientada.</label>
+        <label><input type="radio" name="q1" value="C"> <b>C)</b> Dorme pouco, mas acorda alerta e com ideias criativas.</label>
+        <label><input type="radio" name="q1" value="D"> <b>D)</b> Dorme superficialmente, acorda inquieta e já começa a explorar tudo.</label>
+        <label><input type="radio" name="q1" value="E"> <b>E)</b> Dorme mal, tem agitação motora e desperta com irritação ou desorientação.</label>
     </div>
 
     <div class="question">
-        <p>2. Como a criança lida com brinquedos e objetos?</p>
-        <label><input type="radio" name="q2" value="A"> <b>A)</b> Troca de brinquedo com frequência, brinca sem foco.</label>
-        <label><input type="radio" name="q2" value="B"> <b>B)</b> Alinha, gira ou organiza de forma repetitiva.</label>
-        <label><input type="radio" name="q2" value="C"> <b>C)</b> Cria histórias complexas, usa objetos de formas criativas.</label>
-        <label><input type="radio" name="q2" value="D"> <b>D)</b> Tem muitas ideias, mas pula de uma brincadeira criativa para outra sem concluir.</label>
+        <h4>2. Como lida com brinquedos e objetos?</h4>
+        <label><input type="radio" name="q2" value="A"> <b>A)</b> Troca de brinquedo a todo momento, sem foco nem continuidade.</label>
+        <label><input type="radio" name="q2" value="B"> <b>B)</b> Brinca de forma repetitiva (alinhando, girando), sem variar.</label>
+        <label><input type="radio" name="q2" value="C"> <b>C)</b> Inventa histórias longas, cria com originalidade.</label>
+        <label><input type="radio" name="q2" value="D"> <b>D)</b> Cria ideias interessantes, mas muda de foco sem terminar.</label>
+        <label><input type="radio" name="q2" value="E"> <b>E)</b> Mistura formas rígidas e repetitivas com impulsividade e desorganização.</label>
     </div>
 
     <div class="question">
-        <p>3. Em ambientes com outras crianças, ela tende a:</p>
-        <label><input type="radio" name="q3" value="A"> <b>A)</b> Ser impulsiva, interromper, empurrar, não espera sua vez.</label>
-        <label><input type="radio" name="q3" value="B"> <b>B)</b> Evitar contato, brincar sozinha ou não se interessar pelos outros.</label>
-        <label><input type="radio" name="q3" value="C"> <b>C)</b> Gostar de conversar, liderar jogos, preferir adultos a crianças.</label>
-        <label><input type="radio" name="q3" value="D"> <b>D)</b> Tentar interagir com entusiasmo, mas acabar se frustrando por não ser compreendida.</label>
+        <h4>3. Em contato com outras crianças, geralmente:</h4>
+        <label><input type="radio" name="q3" value="A"> <b>A)</b> É impulsiva, empurra, interrompe e não espera a vez.</label>
+        <label><input type="radio" name="q3" value="B"> <b>B)</b> Prefere brincar sozinha ou ignora os demais.</label>
+        <label><input type="radio" name="q3" value="C"> <b>C)</b> Lidera brincadeiras, conversa bastante com crianças e adultos.</label>
+        <label><input type="radio" name="q3" value="D"> <b>D)</b> Tenta se enturmar, mas se frustra por não ser compreendida.</label>
+        <label><input type="radio" name="q3" value="E"> <b>E)</b> Alterna entre evitar o grupo e agir de forma impulsiva ou confusa.</label>
     </div>
 
     <div class="question">
-        <p>4. Como é a fala da criança?</p>
-        <label><input type="radio" name="q4" value="A"> <b>A)</b> Fala muito, interrompe, às vezes fora de contexto.</label>
-        <label><input type="radio" name="q4" value="B"> <b>B)</b> Fala pouco ou com entonação diferente; às vezes repete frases.</label>
-        <label><input type="radio" name="q4" value="C"> <b>C)</b> Fala com vocabulário avançado para a idade.</label>
-        <label><input type="radio" name="q4" value="D"> <b>D)</b> Fala bastante, com linguagem sofisticada, mas atropela ideias e muda de assunto rápido.</label>
+        <h4>4. Como se comunica?</h4>
+        <label><input type="radio" name="q4" value="A"> <b>A)</b> Fala sem parar, interrompe, muda de assunto abruptamente.</label>
+        <label><input type="radio" name="q4" value="B"> <b>B)</b> Fala pouco, com entonação diferente, repete frases ou palavras.</label>
+        <label><input type="radio" name="q4" value="C"> <b>C)</b> Usa vocabulário elaborado, gosta de conversar sobre temas profundos.</label>
+        <label><input type="radio" name="q4" value="D"> <b>D)</b> Fala bem, mas atropela ideias e fala muito rápido.</label>
+        <label><input type="radio" name="q4" value="E"> <b>E)</b> Pode falar muito ou pouco, com comunicação desorganizada ou fora de contexto.</label>
     </div>
 
     <div class="question">
-        <p>5. Quanto à atenção e foco em tarefas ou histórias:</p>
-        <label><input type="radio" name="q5" value="A"> <b>A)</b> Distrai-se facilmente, não mantém atenção por muito tempo.</label>
-        <label><input type="radio" name="q5" value="B"> <b>B)</b> Foca intensamente em temas específicos, ignora o resto.</label>
-        <label><input type="radio" name="q5" value="C"> <b>C)</b> Mantém atenção longa quando interessada, com concentração incomum.</label>
-        <label><input type="radio" name="q5" value="D"> <b>D)</b> Alterna entre hiperfoco e distração; se não for interessante, perde o foco rápido.</label>
+        <h4>5. Quanto à atenção e foco em tarefas ou histórias:</h4>
+        <label><input type="radio" name="q5" value="A"> <b>A)</b> Distrai-se com qualquer estímulo, abandona atividades no meio.</label>
+        <label><input type="radio" name="q5" value="B"> <b>B)</b> Foca de forma intensa em um só tema, ignorando o resto.</label>
+        <label><input type="radio" name="q5" value="C"> <b>C)</b> Consegue focar por muito tempo quando algo desperta seu interesse.</label>
+        <label><input type="radio" name="q5" value="D"> <b>D)</b> Alterna entre hiperfoco e desatenção; prefere estímulos criativos.</label>
+        <label><input type="radio" name="q5" value="E"> <b>E)</b> Tem dificuldade com foco em grupo; ou hiperfoca ou desorganiza tudo.</label>
     </div>
 
     <div class="question">
-        <p>6. Como reage a regras e limites?</p>
-        <label><input type="radio" name="q6" value="A"> <b>A)</b> Tem dificuldade em seguir regras, desafia, interrompe.</label>
-        <label><input type="radio" name="q6" value="B"> <b>B)</b> Quer que tudo siga uma rotina rígida, fica muito irritada com mudanças.</label>
-        <label><input type="radio" name="q6" value="C"> <b>C)</b> Questiona regras com lógica própria, tenta negociar.</label>
-        <label><input type="radio" name="q6" value="D"> <b>D)</b> Questiona as regras, se frustra, mas obedece se convencida.</label>
+        <h4>6. Como reage a regras e limites?</h4>
+        <label><input type="radio" name="q6" value="A"> <b>A)</b> Reage com oposição, ignora ou desafia frequentemente.</label>
+        <label><input type="radio" name="q6" value="B"> <b>B)</b> Não aceita mudanças, fica irritada se a rotina muda.</label>
+        <label><input type="radio" name="q6" value="C"> <b>C)</b> Questiona com lógica e tenta negociar alternativas.</label>
+        <label><input type="radio" name="q6" value="D"> <b>D)</b> Questiona, se frustra, mas se adapta se convencida.</label>
+        <label><input type="radio" name="q6" value="E"> <b>E)</b> Tem reações intensas a regras e frustrações, com rigidez ou rebeldia.</label>
     </div>
 
     <div class="question">
-        <p>7. Quais habilidades cognitivas chamam mais atenção?</p>
-        <label><input type="radio" name="q7" value="A"> <b>A)</b> Nenhuma muito acima da média, mas é esperta.</label>
-        <label><input type="radio" name="q7" value="B"> <b>B)</b> Algumas áreas são muito boas, outras bem atrasadas.</label>
-        <label><input type="radio" name="q7" value="C"> <b>C)</b> Leitura precoce, memória forte, raciocínio rápido.</label>
-        <label><input type="radio" name="q7" value="D"> <b>D)</b> Muito criativa, com excelente memória e linguagem, mas com comportamento agitado.</label>
+        <h4>7. Quais habilidades cognitivas chamam mais atenção?</h4>
+        <label><input type="radio" name="q7" value="A"> <b>A)</b> Esperta, mas com desempenho geral dentro do esperado.</label>
+        <label><input type="radio" name="q7" value="B"> <b>B)</b> Avanço em algumas áreas e atraso significativo em outras.</label>
+        <label><input type="radio" name="q7" value="C"> <b>C)</b> Raciocínio lógico precoce, memória excelente, vocabulário vasto.</label>
+        <label><input type="radio" name="q7" value="D"> <b>D)</b> Muito criativa, com bom raciocínio e linguagem elaborada.</label>
+        <label><input type="radio" name="q7" value="E"> <b>E)</b> Alterna entre capacidades muito altas e dificuldades evidentes.</label>
     </div>
 
     <div class="question">
-        <p>8. Quando frustrada ou contrariada, a criança:</p>
-        <label><input type="radio" name="q8" value="A"> <b>A)</b> Chora, grita, reage com birras intensas.</label>
-        <label><input type="radio" name="q8" value="B"> <b>B)</b> Fecha-se, isola-se ou tem crises mais rígidas.</label>
-        <label><input type="radio" name="q8" value="C"> <b>C)</b> Tenta argumentar, mesmo sendo pequena.</label>
-        <label><input type="radio" name="q8" value="D"> <b>D)</b> Explode emocionalmente, mas logo tenta retomar o controle com ideias criativas.</label>
+        <h4>8. Quando é contrariada ou frustrada, a criança:</h4>
+        <label><input type="radio" name="q8" value="A"> <b>A)</b> Grita, chora, reage de forma exagerada ou agressiva.</label>
+        <label><input type="radio" name="q8" value="B"> <b>B)</b> Se isola ou tem crises mais rígidas e difíceis de controlar.</label>
+        <label><input type="radio" name="q8" value="C"> <b>C)</b> Argumenta, tenta entender e convencer.</label>
+        <label><input type="radio" name="q8" value="D"> <b>D)</b> Explode emocionalmente, mas tenta se reorganizar.</label>
+        <label><input type="radio" name="q8" value="E"> <b>E)</b> Pode explodir ou se fechar, com dificuldade de autorregulação.</label>
+    </div>
+
+    <div class="question">
+        <h4>9. Como lida com sons, cheiros, texturas ou roupas?</h4>
+        <label><input type="radio" name="q9" value="A"> <b>A)</b> Tem reações exageradas a barulhos ou texturas, mas sem padrão.</label>
+        <label><input type="radio" name="q9" value="B"> <b>B)</b> É extremamente sensível a estímulos sensoriais (luz, som, textura).</label>
+        <label><input type="radio" name="q9" value="C"> <b>C)</b> Tem curiosidade sensorial, mas sem incômodo.</label>
+        <label><input type="radio" name="q9" value="D"> <b>D)</b> Mostra seletividade, mas se adapta bem com diálogo.</label>
+        <label><input type="radio" name="q9" value="E"> <b>E)</b> Alterna entre hiper-reatividade e busca excessiva de estímulos.</label>
+    </div>
+
+    <div class="question">
+        <h4>10. Como se alimenta?</h4>
+        <label><input type="radio" name="q10" value="A"> <b>A)</b> Come sem atenção, brinca com o alimento, dispersa-se fácil.</label>
+        <label><input type="radio" name="q10" value="B"> <b>B)</b> É seletiva, rejeita certos alimentos com forte reação.</label>
+        <label><input type="radio" name="q10" value="C"> <b>C)</b> Explora novos sabores, tem paladar variado.</label>
+        <label><input type="radio" name="q10" value="D"> <b>D)</b> Quer experimentar tudo, mas pula etapas e se distrai.</label>
+        <label><input type="radio" name="q10" value="E"> <b>E)</b> Come bem em alguns dias, e em outros se recusa completamente ou age com rigidez.</label>
+    </div>
+
+    <div class="question">
+        <h4>11. Como é a autonomia para idade? (troca de roupa, higiene, alimentação)</h4>
+        <label><input type="radio" name="q11" value="A"> <b>A)</b> É dependente, se irrita com tarefas sozinha.</label>
+        <label><input type="radio" name="q11" value="B"> <b>B)</b> Insiste em fazer do seu jeito, mesmo se for inadequado.</label>
+        <label><input type="radio" name="q11" value="C"> <b>C)</b> Mostra autonomia precoce e segurança nas tarefas.</label>
+        <label><input type="radio" name="q11" value="D"> <b>D)</b> Tenta ser autônoma, mas se frustra com erros.</label>
+        <label><input type="radio" name="q11" value="E"> <b>E)</b> Alterna entre dependência total e insistência em fazer tudo sozinha com rigidez.</label>
+    </div>
+
+    <div class="question">
+        <h4>12. Como usa a imaginação?</h4>
+        <label><input type="radio" name="q12" value="A"> <b>A)</b> Cria histórias, mas com pouca sequência ou coesão.</label>
+        <label><input type="radio" name="q12" value="B"> <b>B)</b> Brinca pouco com imaginação, prefere repetir ações.</label>
+        <label><input type="radio" name="q12" value="C"> <b>C)</b> Tem mundo imaginativo rico, cria personagens, histórias e ideias novas.</label>
+        <label><input type="radio" name="q12" value="D"> <b>D)</b> É criativa, mas as histórias são rápidas e desorganizadas.</label>
+        <label><input type="radio" name="q12" value="E"> <b>E)</b> Mistura criatividade com repetições ou ideias desconexas.</label>
     </div>
 
     <button class="calculate-button" onclick="calculateResults()">Ver Meu Perfil</button>
 
     <hr>
 
-    <h2>Total de respostas:</h2>
+    <h2>Tabela de Pontuação</h2>
     <table>
         <thead>
             <tr>
                 <th>Letra</th>
                 <th>Total de Marcas</th>
+                <th>Indicação</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>A – TDAH</td>
+                <td>A</td>
                 <td id="totalA">0</td>
+                <td>TDAH</td>
             </tr>
             <tr>
-                <td>B – TEA</td>
+                <td>B</td>
                 <td id="totalB">0</td>
+                <td>TEA</td>
             </tr>
             <tr>
-                <td>C – AHSD</td>
+                <td>C</td>
                 <td id="totalC">0</td>
+                <td>AHSD (Altas Habilidades)</td>
             </tr>
             <tr>
-                <td>D – TDAH + AHSD</td>
+                <td>D</td>
                 <td id="totalD">0</td>
+                <td>TDAH + AHSD</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td id="totalE">0</td>
+                <td>TDAH + TEA</td>
             </tr>
         </tbody>
     </table>
 
-    ---
+    <hr>
 
     <div class="interpretation-section" id="interpretationSection">
-        <h2>🧠 Interpretação dos Resultados</h2>
+        <h2>Interpretação dos Resultados</h2>
 
         <div class="interpretation-item tdah" id="interpA">
-            <h3>🔸 Maioria A – TDAH (Transtorno de Déficit de Atenção e Hiperatividade)</h3>
-            <p>A criança pode apresentar **impulsividade, agitação motora, dificuldade com regras e atenção dispersa**, mas mantém interação social.</p>
-            <p><strong>Intervenções e rotinas recomendadas:</strong></p>
+            <h3>🔵 Maioria A – TDAH <span>(Transtorno de Déficit de Atenção e Hiperatividade)</span></h3>
+            <p>Impulsividade, agitação, distração, dificuldades com limites, mas boa sociabilidade.</p>
+            <p><strong>Intervenções:</strong></p>
             <ul>
-                <li>Manter rotina estruturada e previsível.</li>
-                <li>Usar comandos curtos e objetivos.</li>
-                <li>Estimular atividades físicas controladas (natação, dança etc.).</li>
-                <li>Reforçar comportamentos positivos com elogios imediatos.</li>
-                <li>Apoio psicopedagógico pode ajudar na autorregulação.</li>
+                <li>Rotinas visuais e previsíveis</li>
+                <li>Atividades físicas estruturadas</li>
+                <li>Comandos curtos e repetição</li>
+                <li>Acompanhamento psicopedagógico</li>
             </ul>
         </div>
 
         <div class="interpretation-item tea" id="interpB">
-            <h3>🔹 Maioria B – TEA (Transtorno do Espectro Autista)</h3>
-            <p>Aponta para **dificuldades sociais, interesses restritos, comunicação atípica ou repetitiva e comportamentos sensoriais específicos**.</p>
-            <p><strong>Intervenções e rotinas recomendadas:</strong></p>
+            <h3>🟣 Maioria B – TEA <span>(Transtorno do Espectro Autista)</span></h3>
+            <p>Isolamento social, comunicação atípica, interesses restritos, sensibilidade sensorial.</p>
+            <p><strong>Intervenções:</strong></p>
             <ul>
-                <li>Usar imagens e rotinas visuais.</li>
-                <li>Evitar mudanças bruscas no ambiente.</li>
-                <li>Estimular interação social através de jogos com regras simples.</li>
-                <li>Procurar acompanhamento com equipe multidisciplinar (fonoaudiólogo, psicólogo, terapeuta ocupacional).</li>
-                <li>Adaptações escolares com apoio individualizado.</li>
+                <li>Apoio fonoaudiológico, psicológico e ocupacional</li>
+                <li>Comunicação visual e rotina consistente</li>
+                <li>Estímulo à socialização gradual</li>
+                <li>Adaptação pedagógica</li>
             </ul>
         </div>
 
         <div class="interpretation-item ahsd" id="interpC">
-            <h3>🔸 Maioria C – AHSD (Altas Habilidades/Superdotação)</h3>
-            <p>Sugere **desenvolvimento precoce em áreas cognitivas, linguagem avançada, criatividade e interesse intenso por temas específicos**.</p>
-            <p><strong>Intervenções e rotinas recomendadas:</strong></p>
+            <h3>🟢 Maioria C – AHSD <span>(Altas Habilidades / Superdotação)</span></h3>
+            <p>Desenvolvimento precoce, criatividade, vocabulário avançado, interesse por temas profundos.</p>
+            <p><strong>Intervenções:</strong></p>
             <ul>
-                <li>Oferecer estímulos desafiadores e variados (livros, jogos, arte, música).</li>
-                <li>Respeitar o ritmo emocional, pois podem ser sensíveis.</li>
-                <li>Estimular convivência com outras crianças sem pressionar.</li>
-                <li>Propor atividades abertas, com espaço para criação.</li>
-                <li>Buscar avaliação psicopedagógica para enriquecimento curricular.</li>
+                <li>Enriquecimento intelectual e artístico</li>
+                <li>Estímulos variados e criativos</li>
+                <li>Desenvolvimento emocional e social</li>
+                <li>Avaliação para adaptação pedagógica</li>
             </ul>
         </div>
 
         <div class="interpretation-item tdah-ahsd" id="interpD">
-            <h3>🔹 Maioria D – TDAH + AHSD</h3>
-            <p>A criança pode ter **alta capacidade intelectual combinada com agitação, impulsividade e desorganização**.</p>
-            <p><strong>Intervenções e rotinas recomendadas:</strong></p>
+            <h3>🟠 Maioria D – TDAH + AHSD</h3>
+            <p>Alta capacidade intelectual com agitação, impulsividade, desorganização emocional.</p>
+            <p><strong>Intervenções:</strong></p>
             <ul>
-                <li>Unir estratégias de estrutura (para o TDAH) com liberdade criativa (para AHSD).</li>
-                <li>Propor projetos de curto prazo, com metas visuais e pausas.</li>
-                <li>Estimular autoconhecimento (por meio de desenhos, histórias, emoções).</li>
-                <li>Trabalhar a tolerância à frustração de forma afetuosa.</li>
-                <li>Apoio educacional personalizado, com acolhimento das diferenças.</li>
+                <li>Mistura de estrutura firme com liberdade criativa</li>
+                <li>Projetos curtos com metas visuais</li>
+                <li>Apoio emocional e estratégias para foco</li>
+                <li>Estímulo à autonomia com afeto</li>
+            </ul>
+        </div>
+
+        <div class="interpretation-item tdah-tea" id="interpE">
+            <h3>🔴 Maioria E – TDAH + TEA</h3>
+            <p>Comportamentos rígidos e impulsivos, fala desorganizada, sensorialidade intensa e desatenção marcada.</p>
+            <p><strong>Intervenções:</strong></p>
+            <ul>
+                <li>Acompanhamento interdisciplinar (fono, TO, psicólogo, pedagogo)</li>
+                <li>Estratégias combinadas de rotina, estrutura e linguagem visual</li>
+                <li>Reforço de habilidades sociais com mediação</li>
+                <li>Adaptações educacionais com planejamento individual</li>
             </ul>
         </div>
     </div>
 
     <script>
         function calculateResults() {
-            let counts = { A: 0, B: 0, C: 0, D: 0 };
+            let counts = { A: 0, B: 0, C: 0, D: 0, E: 0 };
             const questions = document.querySelectorAll('.question');
+            let allAnswered = true; // Flag para verificar se todas as perguntas foram respondidas
 
             questions.forEach(question => {
                 const selectedOption = question.querySelector('input[type="radio"]:checked');
                 if (selectedOption) {
                     counts[selectedOption.value]++;
+                } else {
+                    allAnswered = false; // Se alguma pergunta não foi respondida, seta a flag para false
                 }
             });
+
+            if (!allAnswered) {
+                alert("Por favor, responda a todas as perguntas para ver o perfil completo.");
+                return; // Impede a execução do restante da função se nem todas as perguntas foram respondidas
+            }
 
             document.getElementById('totalA').textContent = counts.A;
             document.getElementById('totalB').textContent = counts.B;
             document.getElementById('totalC').textContent = counts.C;
             document.getElementById('totalD').textContent = counts.D;
+            document.getElementById('totalE').textContent = counts.E;
 
             // Oculta todas as interpretações primeiro
             document.querySelectorAll('.interpretation-item').forEach(item => {
                 item.style.display = 'none';
             });
 
-            // Encontra a letra com maior contagem
+            // Encontra a letra(s) com maior contagem
             let maxCount = 0;
             let dominantLetters = [];
-            for (const letter in counts) {
+            // Itera sobre as contagens de A a E para manter a ordem se houver empate
+            const order = ['A', 'B', 'C', 'D', 'E'];
+            order.forEach(letter => {
                 if (counts[letter] > maxCount) {
                     maxCount = counts[letter];
                     dominantLetters = [letter];
                 } else if (counts[letter] === maxCount && maxCount > 0) {
-                    dominantLetters.push(letter); // Adiciona se houver empate e contagem > 0
+                    dominantLetters.push(letter);
                 }
-            }
+            });
 
             // Exibe apenas a(s) interpretação(ões) dominante(s)
             if (dominantLetters.length > 0) {
@@ -371,13 +462,10 @@
                     const interpretationElement = document.getElementById(interpId);
                     if (interpretationElement) {
                         interpretationElement.style.display = 'block';
-                        // Rola para a seção de interpretação
-                        interpretationElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
                 });
-            } else {
-                // Caso nenhuma opção seja selecionada
-                alert("Por favor, selecione uma opção para cada pergunta antes de ver o perfil.");
+                // Rola para a seção de interpretação após exibir
+                document.getElementById('interpretationSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
     </script>
