@@ -273,7 +273,7 @@
     <label><input type="radio" name="q11" value="F" /> F) Apresenta reações sensoriais típicas e equilibradas.</label>
   </fieldset>
 
-  <fieldset>
+   <fieldset>
     <legend>12. Como a criança lida com situações novas ou desconhecidas?</legend>
     <label><input type="radio" name="q12" value="A" /> A) Fica agitada, ansiosa e difícil de acalmar.</label>
     <label><input type="radio" name="q12" value="B" /> B) Apresenta resistência e evita essas situações.</label>
@@ -301,43 +301,61 @@
   const btnClose = document.getElementById('btn-close');
 
   const mensagens = {
-    A: {
-      titulo: "Maioria A – TDAH (Transtorno de Déficit de Atenção e Hiperatividade) 🌀",
-      texto: `Pode apresentar impulsividade, agitação motora e dificuldade de atenção, mas mantém interação social.  
-      <strong>Recomendação:</strong> Procure avaliação com psicólogo e neuropediatra para diagnóstico e acompanhamento.  
-      <strong>Dicas:</strong> Mantenha rotina estruturada, use comandos claros e estimule atividades físicas controladas.`
-    },
-    B: {
-      titulo: "Maioria B – TEA (Transtorno do Espectro Autista) 🧩",
-      texto: `Aponta para dificuldades sociais, comunicação atípica e comportamentos repetitivos.  
-      <strong>Recomendação:</strong> Procure equipe multidisciplinar (fonoaudiólogo, psicólogo, terapeuta ocupacional) para avaliação detalhada.  
-      <strong>Dicas:</strong> Use rotinas visuais, evite mudanças bruscas e promova interação social com jogos simples.`
-    },
-    C: {
-      titulo: "Maioria C – AHSD (Altas Habilidades/Superdotação) 🌟",
-      texto: `Sugere desenvolvimento precoce em áreas cognitivas, criatividade e interesse intenso.  
-      <strong>Recomendação:</strong> Avaliação psicopedagógica para enriquecimento curricular e suporte emocional.  
-      <strong>Dicas:</strong> Ofereça estímulos variados e respeite o ritmo emocional da criança.`
-    },
-    D: {
-      titulo: "Maioria D – TDAH + AHSD (Combinado) ⚡",
-      texto: `Alta capacidade intelectual com agitação e impulsividade.  
-      <strong>Recomendação:</strong> Suporte educacional personalizado e avaliação multidisciplinar para estratégias integradas.  
-      <strong>Dicas:</strong> Combine rotina estruturada com liberdade criativa e trabalhe a tolerância à frustração.`
-    },
-    E: {
-      titulo: "Maioria E – TDAH + TEA (Combinado) 🔄",
-      texto: `Pode apresentar comportamentos rígidos, impulsivos, fala desorganizada e sensibilidade sensorial acentuada.  
-      <strong>Recomendação:</strong> Avaliação interdisciplinar (psicólogo, terapeuta ocupacional, fonoaudiólogo) é fundamental para plano integrado.  
-      <strong>Dicas:</strong> Promova rotinas estruturadas, adaptações respeitosas e um olhar acolhedor para o desenvolvimento social e emocional.`
-    },
-    F: {
-      titulo: "Maioria F – Desenvolvimento Neurotípico ✅",
-      texto: `Apresenta desenvolvimento típico para a idade, com comportamento e interação adequados.  
-      <strong>Recomendação:</strong> Continue estimulando ambientes seguros e acolhedores, com rotina equilibrada e atenção ao bem-estar.  
-      <strong>Dicas:</strong> Fique atento a mudanças e continue promovendo diálogo e aprendizado saudável.`
-    }
-  };
+     A: {
+    titulo: "✅ Maioria das respostas: A 🧩",
+    texto: `
+      🧠 Padrões parecem indicar a presença do Transtorno do Espectro Autista (TEA), com dificuldades em comunicação social, interesses restritos e comportamentos repetitivos.  
+      👩‍⚕️ Recomenda-se avaliação por equipe multidisciplinar, incluindo psicólogo, fonoaudiólogo e terapeuta ocupacional.  
+      🏡 No dia a dia, promova rotinas visuais, ambientes previsíveis e interações sociais graduais.  
+      ❤️ Tenha paciência e ofereça um ambiente acolhedor, valorizando o jeito único da criança.
+    `
+  },
+  B: {
+    titulo: "✅ Maioria das respostas: B 🌀",
+    texto: `
+      🧠 Padrões parecem indicar a presença de Transtorno de Déficit de Atenção e Hiperatividade (TDAH), com indícios de impulsividade, desatenção e hiperatividade, mas com capacidade de interação social.  
+      👩‍⚕️ Procure acompanhamento com psicólogo e neuropediatra para diagnóstico e suporte.  
+      🏡 Mantenha rotina estruturada, use instruções claras e incentive atividades físicas regulares.  
+      ❤️ Apoie com compreensão e encorajamento para ajudar a criança a desenvolver suas potencialidades.
+    `
+  },
+  C: {
+    titulo: "✅ Maioria das respostas: C 🌟",
+    texto: `
+      🧠 Padrões parecem indicar a presença de Altas Habilidades/Superdotação (AHSD), com capacidades cognitivas avançadas, criatividade e interesse intenso por determinados temas.  
+      👩‍⚕️ Avaliação psicopedagógica é indicada para suporte educacional e emocional adequado.  
+      🏡 Ofereça desafios variados, respeitando o ritmo e as necessidades emocionais da criança.  
+      ❤️ Valorize o talento da criança e incentive seu crescimento com carinho e atenção.
+    `
+  },
+  D: {
+    titulo: "✅ Maioria das respostas: D ⚡",
+    texto: `
+      🧠 Padrões parecem indicar a presença de um Perfil combinado (TDAH + AHSD), com alta inteligência, impulsividade e agitação, exigindo atenção multidisciplinar.  
+      👩‍⚕️ Recomendado acompanhamento integrado com psicólogo, neuropediatra e psicopedagogo.  
+      🏡 Estabeleça rotina equilibrada que permita criatividade e trabalho de autocontrole.  
+      ❤️ Entenda as dificuldades e potencialidades, oferecendo apoio consistente e afetuoso.
+    `
+  },
+  E: {
+    titulo: "✅ Maioria das respostas: E 🔄",
+    texto: `
+      🧠 Padrões parecem indicar a presença de um Perfil combinado (TDAH + TEA), com comportamentos rígidos, impulsividade, fala desorganizada e sensibilidade sensorial.  
+      👩‍⚕️ Avaliação interdisciplinar com psicólogo, terapeuta ocupacional e fonoaudiólogo é fundamental.  
+      🏡 Promova rotinas estruturadas, adaptações respeitosas e um ambiente acolhedor.  
+      ❤️ Cultive empatia e paciência para apoiar o desenvolvimento social e emocional da criança.
+    `
+  },
+  F: {
+    titulo: "✅ Maioria das respostas: F ✅",
+    texto: `
+      🧠 Padrões parecem indicar Desenvolvimento Neurotípico, com comportamento e interação adequados para a idade.  
+      👩‍⚕️ Continue proporcionando ambientes seguros e estímulos saudáveis para o crescimento.  
+      🏡 Mantenha rotina equilibrada e esteja atento a mudanças que possam precisar de atenção.  
+      ❤️ Valorize cada conquista e fortaleça os vínculos familiares e educacionais.
+    `
+  }
+};
 
   btnMapear.addEventListener('click', () => {
     const respostas = {};
