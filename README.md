@@ -1,104 +1,70 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>README - KidsMap</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 400px;
-      margin: auto;
-      padding: 2rem;
-      background: #fafafa;
-      color: #333;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      border-bottom: 3px solid #ccc;
-      padding-bottom: 0.5rem;
-    }
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 2rem;
-      color: #005e7c;
-    }
-    h3 {
-      font-size: 1.4rem;
-      margin-top: 1.2rem;
-      color: #007a5c;
-    }
-    p, li {
-      font-size: 1rem;
-    }
-    blockquote {
-      background-color: #f3f3f3;
-      border-left: 5px solid #ccc;
-      padding: 1rem;
-      margin: 1rem 0;
-      font-style: italic;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li::before {
-      content: "✔️ ";
-      margin-right: 0.5rem;
-    }
-  </style>
-</head>
-<body>
+# 🧠 KidsMap
 
-  <h1>KidsMap - Mapa de Observação Infantil</h1>
+**Checklist de Observação Infantil (0 a 4 anos)**  
+Um mapa interativo para ajudar pais, educadores e profissionais da saúde mental a identificarem possíveis perfis comportamentais em crianças pequenas.
 
-  <p><strong>Um checklist HTML interativo</strong> para pais, educadores e profissionais da saúde mental que atua como um <strong>mapa prático para a observação do desenvolvimento infantil (0-4 anos)</strong>. Facilita a identificação precoce de padrões comportamentais relacionados a <strong>TDAH</strong>, <strong>TEA</strong>, <strong>AHSD</strong> ou a combinação <strong>TDAH + AHSD</strong>, promovendo encaminhamentos e acompanhamentos adequados.</p>
+> ⚠️ Esta é uma ferramenta indicativa, não substitui diagnóstico clínico.  
+> Consulte sempre profissionais especializados.
 
-  <blockquote>
-    ⚠️ Ferramenta indicativa, não substitui avaliação profissional.
-  </blockquote>
+---
 
-  <h2>🔍 Sobre o KidsMap</h2>
+## 🧩 O que é o KidsMap?
 
-  <p>O <strong>KidsMap</strong> é desenvolvido em HTML, CSS e JavaScript, com interface simples e responsiva, projetada para auxiliar na observação dos comportamentos da criança no cotidiano.</p>
+O **KidsMap** é um recurso desenvolvido em **HTML, CSS e JavaScript** para uso gratuito, online ou offline, que auxilia na observação de traços comportamentais relacionados aos seguintes perfis:
 
-  <p>Baseado em evidências científicas da psicologia do desenvolvimento e da medicina baseada em evidências, o KidsMap funciona como um recurso para ampliar o olhar atento de famílias, escolas e profissionais.</p>
+- A. Transtorno do Espectro Autista (TEA)
+- B. Transtorno do Déficit de Atenção com Hiperatividade (TDAH)
+- C. Transtorno de Processamento Sensorial (TPS)
+- D. Transtorno de Ansiedade Infantil
+- E. Perfil combinado (TDAH + TEA)
+- F. Neurotípico
 
-  <h2>🚀 Funcionalidades-chave</h2>
+---
 
-  <ul>
-    <li><strong>Interface intuitiva:</strong> Facilita o registro rápido e organizado das observações.</li>
-    <li><strong>Resultado instantâneo:</strong> Quantifica respostas por perfil (TDAH, TEA, AHSD, TDAH + AHSD), promovendo clareza e direcionamento.</li>
-    <li><strong>Orientações detalhadas:</strong> Fornece descrições e sugestões iniciais de intervenções sociais, educacionais e emocionais para cada perfil.</li>
-    <li><strong>Plataforma responsiva:</strong> Acessível em desktops e dispositivos móveis.</li>
-    <li><strong>Código aberto:</strong> Personalizável e aberto para contribuições da comunidade.</li>
-  </ul>
+## 🛠️ Como usar
 
-  <h2>📝 Como usar</h2>
+1. Observe a criança por um período de pelo menos 2 semanas em diferentes contextos (casa, escola, passeios etc.)
+2. Marque os comportamentos observados diretamente na lista.
+3. Ao final, clique em **🧩 Mapear Perfil** para visualizar os resultados.
+4. Com base no perfil predominante, você receberá orientações iniciais sobre:
+   - **Rotina e adaptação escolar**
+   - **Estímulos em casa**
+   - **Busca por acompanhamento profissional**
 
-  <ol>
-    <li>Clone ou baixe o repositório.</li>
-    <li>Abra o arquivo <code>index.html</code> no navegador.</li>
-    <li>Marque as opções que melhor representam o comportamento observado na criança.</li>
-    <li>Clique em "🧩 Mapear Perfil" para visualizar resultados e orientações iniciais.</li>
-  </ol>
+---
 
-  <h2>⚠️ Importante</h2>
+## 👨‍👩‍👧 Para quem é
 
-  <p><strong>KidsMap</strong> é uma ferramenta de triagem e apoio à observação, não um instrumento diagnóstico.</p>
+- Pais e cuidadores
+- Professores da educação infantil
+- Psicopedagogos e terapeutas ocupacionais
 
-  <p>Use-o como apoio para ampliar o olhar e iniciar conversas informadas, sempre buscando <strong>avaliação profissional qualificada</strong> para confirmação e definição de intervenções.</p>
+---
 
-  <h2>🤝 Contribua</h2>
+## 📦 Recursos
 
-  <p>O <strong>KidsMap</strong> está em constante evolução. Convidamos você a explorar, melhorar e adaptar o projeto para que seja cada vez mais eficaz no apoio às famílias, escolas e profissionais.</p>
+- **Interface responsiva**
+- **Funciona offline** (basta abrir o arquivo `.html` em qualquer navegador)
+- Design lúdico e intuitivo
+- Orientações práticas e cristãs para acolher a criança
 
-  <h2>💡 Agradecimento</h2>
+---
 
-  <p>Obrigado por colaborar para um cuidado mais atento e precoce ao desenvolvimento infantil!</p>
+## 📥 Como baixar e usar
 
-</body>
-</html>
+1. Faça o download dos arquivos (`index.html`)
+2. Abra o `index.html` em qualquer navegador
+3. Use livremente e compartilhe!
 
+---
+
+## ✅ Conclusão
+
+O **KidsMap** não é apenas um checklist — é uma ferramenta de acolhimento, escuta ativa e observação atenta.  
+Nos primeiros anos de vida, cada gesto, olhar e comportamento carrega pistas valiosas sobre o universo interior da criança.  
+Este material foi pensado para te ajudar a **trilhar esse caminho com atenção e empatia**.
+
+🧭 *Use o KidsMap para mapear possibilidades, não para rotular.*  
+Cada criança é única e merece ser compreendida com amor e responsabilidade.
+
+> ✨ Que este recurso seja um instrumento de direção para famílias e profissionais comprometidos com o desenvolvimento.
