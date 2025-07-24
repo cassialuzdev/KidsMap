@@ -1,493 +1,366 @@
-<nav style="text-align: center; margin-bottom: 20px;">
-  <a href="index.html">🏠 Início</a> |
-  <a href="readme.html">📘 Sobre</a> |
-  <a href="fundamentacao.html">🔬 Fundamentação</a>
-</nav>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✅ KidsMap: Checklist de Observação Infantil – Perfil Comportamental (0 a 4 anos)</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0 auto;
-            max-width: 400px;
-            padding: 20px;
-            background-color: #f4f7f6;
-        }
-         </style>
-</head>
-<body>
-    <img src="logo.png" alt="Logo KidsMap" style="max-width: 250px; display: block; margin: 20px auto;" />
-    
-        h1, h2, h3, h4 {
-            color: #007bff; /* Azul primário */
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 2.2em;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #007bff;
-        }
-        h2 {
-            font-size: 1.8em;
-            margin-top: 40px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #ddd;
-        }
-        h3 {
-            font-size: 1.3em;
-            margin-top: 30px;
-            color: #ffc107; /* Amarelo primário */
-        }
-        h4 {
-            text-align: left;
-            font-size: 1.1em;
-            color: #343a40;
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-        .instructions, .note {
-            background-color: #e6f2ff; /* Tom mais claro de azul */
-            border-left: 6px solid #007bff;
-            padding: 15px 20px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .instructions p, .note p {
-            margin: 0;
-        }
-        .question {
-            background-color: #fff;
-            margin-bottom: 25px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border: 1px solid #ddd;
-        }
-        .question p {
-            font-weight: bold;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-            color: #343a40;
-        }
-        .question label {
-            display: flex;
-            align-items: flex-start; /* Alinha o texto ao topo do radio */
-            margin-bottom: 10px;
-            cursor: pointer;
-            padding: 8px 0;
-            transition: background-color 0.2s ease;
-        }
-        .question label:hover {
-            background-color: #f0f0f0;
-            border-radius: 4px;
-        }
-        .question input[type="radio"] {
-            margin-right: 12px;
-            margin-top: 4px; /* Ajusta a posição vertical do radio button */
-            transform: scale(1.2); /* Aumenta o tamanho do radio button */
-            accent-color: #28a745; /* Cor verde para os radio buttons */
-            flex-shrink: 0; /* Evita que o radio button encolha */
-        }
-        .calculate-button {
-            display: block;
-            width: 80%;
-            max-width: 300px;
-            margin: 40px auto;
-            padding: 15px 25px;
-            background-color: #28a745; /* Verde para o botão de cálculo */
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        }
-        .calculate-button:hover {
-            background-color: #218838;
-            transform: translateY(-2px);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px;
-            margin-bottom: 40px;
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-        }
-        th {
-            background-color: #e9ecef;
-            color: #333;
-            font-weight: bold;
-        }
-        td {
-            color: #555;
-        }
-        .interpretation-section {
-            margin-top: 40px;
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border: 1px solid #ddd;
-        }
-        .interpretation-item {
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-left: 6px solid;
-            border-radius: 5px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            display: none; /* Escondido por padrão */
-        }
-        /* Cores das barras laterais para cada perfil */
-        .interpretation-item.tdah { border-color: #dc3545; } /* Vermelho */
-        .interpretation-item.tea { border-color: #17a2b8; }  /* Ciano */
-        .interpretation-item.ahsd { border-color: #ffc107; } /* Amarelo */
-        .interpretation-item.tdah-ahsd { border-color: #6f42c1; } /* Roxo */
-        .interpretation-item.tdah-tea { border-color: #fd7e14; } /* Laranja */
-        .interpretation-item.neurotipico { border-color: #28a745; } /* Verde para Neurotípico */
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>KidsMap – Checklist de Observação Infantil</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 1rem;
+    background: #f9f9f9;
+    color: #333;
+  }
+  h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  form {
+    max-width: 720px;
+    margin: auto;
+    background: #fff;
+    padding: 1rem 2rem 2rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  fieldset {
+    border: none;
+    margin-bottom: 1.5rem;
+  }
+  legend {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  label {
+    display: block;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+  }
+  input[type="checkbox"] {
+    margin-right: 0.7rem;
+    transform: scale(1.1);
+    vertical-align: middle;
+  }
+  button {
+    display: block;
+    margin: 2rem auto 1rem auto;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #1a2733;
+  }
+  @media(max-width: 480px) {
+    form {
+      padding: 1rem 1rem 2rem 1rem;
+    }
+  }
 
-
-        .interpretation-item h3 {
-            margin-top: 0;
-            text-align: left;
-            font-size: 1.4em;
-            margin-bottom: 10px;
-            color: inherit; /* Herda a cor da barra lateral ou padrão */
-        }
-        .interpretation-item h3 span {
-            font-size: 0.9em;
-            font-weight: normal;
-            color: #555;
-        }
-        .interpretation-item ul {
-            list-style-type: disc;
-            margin-left: 25px;
-            padding-left: 0;
-        }
-        .interpretation-item li {
-            margin-bottom: 8px;
-        }
-        .page-break {
-            page-break-after: always;
-        }
-    </style>
+  /* Modal styles */
+  #modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(44, 62, 80, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+  #modal {
+    background: #fff;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+    color: #2c3e50;
+    max-height: 80vh;
+    overflow-y: auto;
+    font-size: 1rem;
+  }
+  #modal h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 0.3rem;
+  }
+  #modal p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+  }
+  #modal button {
+    background-color: #e74c3c;
+    margin-top: 1.5rem;
+    width: 100%;
+    font-weight: 700;
+  }
+  #modal button:hover {
+    background-color: #c0392b;
+  }
+</style>
 </head>
 <body>
 
-    <div class="page-break"></div>
+<h1>🧠 KidsMap</h1>
+<h2>Checklist de Observação Infantil (0 a 4 anos)</h2>
 
-    <h1>✅ **CHECKLIST DE OBSERVAÇÃO INFANTIL – PERFIL COMPORTAMENTAL (0 A 4 ANOS)**</h1>
-    <h2 style="text-align: center; margin-top: -15px;">Versão ampliada e multifatorial</h2>
+<form id="kidsmap-form">
 
-    <div class="instructions">
-        <h3>**Instruções**</h3>
-        <ul>
-            <li>Responda com base na observação frequente e atual da criança (últimos 3 meses).</li>
-            <li>Marque apenas **uma alternativa por item**, aquela que **melhor representa** o comportamento predominante.</li>
-            <li>Ao final, conte quantas vezes cada letra foi marcada.</li>
-            <li>Veja a interpretação dos perfis e sugestões práticas.</li>
-        </ul>
-        <p class="note"><em>*Este material tem caráter informativo e não substitui avaliação clínica ou pedagógica profissional.</em></p>
-    </div>
+  <fieldset>
+    <legend>1. Como é o padrão de sono da criança?</legend>
+    <label><input type="checkbox" name="q1" value="A" /> A) Acorda várias vezes, tem dificuldade para dormir, parece inquieta.</label>
+    <label><input type="checkbox" name="q1" value="B" /> B) Sono irregular, com despertares frequentes e dificuldade para voltar a dormir.</label>
+    <label><input type="checkbox" name="q1" value="C" /> C) Dorme menos que o esperado, mas mantém foco e energia durante o dia.</label>
+    <label><input type="checkbox" name="q1" value="D" /> D) Sono irregular e agitado, mas com interesse intenso nas atividades.</label>
+    <label><input type="checkbox" name="q1" value="E" /> E) Sono muito agitado, com resistência forte a mudanças na rotina.</label>
+    <label><input type="checkbox" name="q1" value="F" /> F) Dorme tranquilo, com horário regular e descanso adequado.</label>
+  </fieldset>
 
-    <hr>
+  <fieldset>
+    <legend>2. Como a criança lida com brinquedos e objetos?</legend>
+    <label><input type="checkbox" name="q2" value="A" /> A) Troca de brinquedo com frequência, brinca sem foco.</label>
+    <label><input type="checkbox" name="q2" value="B" /> B) Alinha, gira ou organiza de forma repetitiva.</label>
+    <label><input type="checkbox" name="q2" value="C" /> C) Cria histórias complexas, usa objetos de formas criativas.</label>
+    <label><input type="checkbox" name="q2" value="D" /> D) Tem muitas ideias, mas pula de uma brincadeira criativa para outra sem concluir.</label>
+    <label><input type="checkbox" name="q2" value="E" /> E) Mostra comportamentos rígidos e repetitivos.</label>
+    <label><input type="checkbox" name="q2" value="F" /> F) Brinca de forma tranquila e adequada à idade.</label>
+  </fieldset>
 
-    <div class="question">
-        <h4>1. Comunicação verbal e linguagem</h4>
-        <p>Como a criança se comunica quando quer algo?</p>
-        <label><input type="radio" name="q1" value="A"> <b>A</b> – Interrompe, grita ou fala de forma impulsiva, sem considerar se está sendo ouvida.</label>
-        <label><input type="radio" name="q1" value="B"> <b>B</b> – Evita o contato verbal, usa poucas palavras ou prefere gestos e sons repetitivos.</label>
-        <label><input type="radio" name="q1" value="C"> <b>C</b> – Fala de forma excessiva, com tom firme e discurso argumentativo, mesmo que seja pequena.</label>
-        <label><input type="radio" name="q1" value="D"> <b>D</b> – Alterna entre fala impulsiva e falas muito controladas, dependendo do ambiente.</label>
-        <label><input type="radio" name="q1" value="E"> <b>E</b> – Demonstra falas fora de contexto, fixação em temas específicos e fala repetitiva.</label>
-        <label><input type="radio" name="q1" value="F"> <b>F</b> – Usa palavras adequadas para a idade, com variação emocional e crescimento gradual do vocabulário.</label>
-    </div>
+  <fieldset>
+    <legend>3. Em ambientes com outras crianças, ela tende a:</legend>
+    <label><input type="checkbox" name="q3" value="A" /> A) Ser impulsiva, interromper, empurrar, não espera sua vez.</label>
+    <label><input type="checkbox" name="q3" value="B" /> B) Evitar contato, brincar sozinha ou não se interessar pelos outros.</label>
+    <label><input type="checkbox" name="q3" value="C" /> C) Gostar de conversar, liderar jogos, preferir adultos a crianças.</label>
+    <label><input type="checkbox" name="q3" value="D" /> D) Tentar interagir com entusiasmo, mas acabar se frustrando por não ser compreendida.</label>
+    <label><input type="checkbox" name="q3" value="E" /> E) Apresentar dificuldades sociais e rigidez.</label>
+    <label><input type="checkbox" name="q3" value="F" /> F) Socializa bem, respeitando limites e revezamento.</label>
+  </fieldset>
 
-    <div class="question">
-        <h4>2. Atenção e foco</h4>
-        <p>Como é a atenção da criança durante atividades dirigidas (como contar uma história)?</p>
-        <label><input type="radio" name="q2" value="A"> <b>A</b> – Perde o foco rapidamente, levanta, distrai-se com qualquer estímulo.</label>
-        <label><input type="radio" name="q2" value="B"> <b>B</b> – Não se envolve ou se distancia do grupo, mesmo sem distrações visíveis.</label>
-        <label><input type="radio" name="q2" value="C"> <b>C)</b> Parece atenta, mas desvia o foco para questionar, comandar ou comentar fora de hora.</label>
-        <label><input type="radio" name="q2" value="D"> <b>D</b> – Alterna entre agitação e retraimento; tem dificuldade tanto para focar quanto para interagir.</label>
-        <label><input type="radio" name="q2" value="E"> <b>E</b> – Foca por longos períodos, mas apenas em temas específicos, ignorando o restante.</label>
-        <label><input type="radio" name="q2" value="F"> <b>F</b> – Participa com atenção compatível à idade e responde conforme a complexidade da tarefa.</label>
-    </div>
+  <fieldset>
+    <legend>4. Como é a fala da criança?</legend>
+    <label><input type="checkbox" name="q4" value="A" /> A) Fala muito, interrompe, às vezes fora de contexto.</label>
+    <label><input type="checkbox" name="q4" value="B" /> B) Fala pouco ou com entonação diferente; às vezes repete frases.</label>
+    <label><input type="checkbox" name="q4" value="C" /> C) Fala com vocabulário avançado para a idade.</label>
+    <label><input type="checkbox" name="q4" value="D" /> D) Fala bastante, com linguagem sofisticada, mas atropela ideias e muda de assunto rápido.</label>
+    <label><input type="checkbox" name="q4" value="E" /> E) Fala desorganizada e com dificuldades na comunicação.</label>
+    <label><input type="checkbox" name="q4" value="F" /> F) Comunicação clara e adequada para a idade.</label>
+  </fieldset>
 
-    <div class="question">
-        <h4>3. Sensibilidade sensorial</h4>
-        <p>Como a criança reage a sons altos, roupas ou texturas de alimentos?</p>
-        <label><input type="radio" name="q3" value="A"> <b>A</b> – Pode reclamar ou reagir impulsivamente, mas volta à atividade rapidamente.</label>
-        <label><input type="radio" name="q3" value="B"> <b>B</b> – Evita certos sons, cheiros, texturas com forte resistência, choro ou isolamento.</label>
-        <label><input type="radio" name="q3" value="C"> <b>C</b> – Tolera bem, mas prefere controlar como será exposta (ex: exige roupas específicas).</label>
-        <label><input type="radio" name="q3" value="D"> <b>D</b> – Mostra sensibilidade variável, às vezes extrema, às vezes indiferente.</label>
-        <label><input type="radio" name="q3" value="E"> <b>E</b> – Fica fixada em certos estímulos sensoriais ou tem aversão intensa a estímulos suaves.</label>
-        <label><input type="radio" name="q3" value="F"> <b>F</b> – Tolera bem a maioria dos estímulos, com pequenas reações dentro do esperado para a idade.</label>
-    </div>
+  <fieldset>
+    <legend>5. Quanto à atenção e foco em tarefas ou histórias:</legend>
+    <label><input type="checkbox" name="q5" value="A" /> A) Distrai-se facilmente, não mantém atenção por muito tempo.</label>
+    <label><input type="checkbox" name="q5" value="B" /> B) Foca intensamente em temas específicos, ignora o resto.</label>
+    <label><input type="checkbox" name="q5" value="C" /> C) Mantém atenção longa quando interessada, com concentração incomum.</label>
+    <label><input type="checkbox" name="q5" value="D" /> D) Alterna entre hiperfoco e distração; se não for interessante, perde o foco rápido.</label>
+    <label><input type="checkbox" name="q5" value="E" /> E) Apresenta dificuldade em autorregulação da atenção e hiperatividade.</label>
+    <label><input type="checkbox" name="q5" value="F" /> F) Concentração adequada para a idade e tarefa.</label>
+  </fieldset>
 
-    <div class="question">
-        <h4>4. Comportamento social</h4>
-        <p>Como a criança interage com outras crianças e adultos em contextos variados?</p>
-        <label><input type="radio" name="q4" value="A"> <b>A</b> – Tenta chamar atenção, interrompe, se frustra facilmente e reage com birra.</label>
-        <label><input type="radio" name="q4" value="B"> <b>B</b> – Evita interações ou se isola, mesmo quando encorajada.</label>
-        <label><input type="radio" name="q4" value="C"> <b>C</b> – Busca liderar ou controlar a brincadeira, tem dificuldade em aceitar regras sociais.</label>
-        <label><input type="radio" name="q4" value="D"> <b>D</b> – Oscila entre busca por atenção e retraimento, com respostas desproporcionais.</label>
-        <label><input type="radio" name="q4" value="E"> <b>E</b> – Faz interações mecânicas ou repetitivas, com pouca empatia ou reciprocidade.</label>
-        <label><input type="radio" name="q4" value="F"> <b>F</b> – Demonstra interesse, imita os pares, busca companhia e responde com empatia crescente.</label>
-    </div>
+  <fieldset>
+    <legend>6. Como reage a regras e limites?</legend>
+    <label><input type="checkbox" name="q6" value="A" /> A) Tem dificuldade em seguir regras, desafia, interrompe.</label>
+    <label><input type="checkbox" name="q6" value="B" /> B) Quer que tudo siga uma rotina rígida, fica muito irritada com mudanças.</label>
+    <label><input type="checkbox" name="q6" value="C" /> C) Questiona regras com lógica própria, tenta negociar.</label>
+    <label><input type="checkbox" name="q6" value="D" /> D) Questiona as regras, se frustra, mas obedece se convencida.</label>
+    <label><input type="checkbox" name="q6" value="E" /> E) Mostra resistência e rigidez em relação a mudanças nas regras.</label>
+    <label><input type="checkbox" name="q6" value="F" /> F) Aceita regras e limites de forma tranquila.</label>
+  </fieldset>
 
-    <div class="question">
-        <h4>5. Alimentação</h4>
-        <p>Como a criança lida com a hora da alimentação?</p>
-        <label><input type="radio" name="q5" value="A"> <b>A</b> – Come com pressa ou distraída, larga a comida para fazer outra coisa.</label>
-        <label><input type="radio" name="q5" value="B"> <b>B</b> – Tem aversão a várias texturas, recusa alimentos com reações fortes.</label>
-        <label><input type="radio" name="q5" value="C"> <b>C</b> – Quer escolher o cardápio, protesta quando não está do seu jeito.</label>
-        <label><input type="radio" name="q5" value="D"> <b>D</b> – Alterna entre recusa intensa e episódios de comer em excesso ou impulsivamente.</label>
-        <label><input type="radio" name="q5" value="E"> <b>E</b> – Come apenas alimentos restritos e fixos, com alto apego ritualístico.</label>
-        <label><input type="radio" name="q5" value="F"> <b>F</b> – Pode ter preferências, mas come bem na maioria dos dias, com variedade.</label>
-    </div>
+  <fieldset>
+    <legend>7. Quais habilidades cognitivas chamam mais atenção?</legend>
+    <label><input type="checkbox" name="q7" value="A" /> A) Nenhuma muito acima da média, mas é esperta.</label>
+    <label><input type="checkbox" name="q7" value="B" /> B) Algumas áreas são muito boas, outras bem atrasadas.</label>
+    <label><input type="checkbox" name="q7" value="C" /> C) Leitura precoce, memória forte, raciocínio rápido.</label>
+    <label><input type="checkbox" name="q7" value="D" /> D) Muito criativa, com excelente memória e linguagem, mas com comportamento agitado.</label>
+    <label><input type="checkbox" name="q7" value="E" /> E) Dificuldade em organizar pensamentos e tarefas.</label>
+    <label><input type="checkbox" name="q7" value="F" /> F) Desenvolvimento cognitivo adequado para a idade.</label>
+  </fieldset>
 
-    <div class="question">
-        <h4>6. Reações emocionais</h4>
-        <p>Como reage a frustrações e mudanças na rotina?</p>
-        <label><input type="radio" name="q6" value="A"> <b>A</b> – Explode facilmente, chora, grita, mas se acalma com mediação.</label>
-        <label><input type="radio" name="q6" value="B"> <b>B</b> – Pode não reagir visivelmente, mas se fecha ou repete comportamentos.</label>
-        <label><input type="radio" name="q6" value="C"> <b>C</b> – Protesta de forma argumentativa, desafia ou manipula a situação.</label>
-        <label><input type="radio" name="q6" value="D"> <b>D</b> – Reage com ansiedade ou confusão, com dificuldade de nomear o que sente.</label>
-        <label><input type="radio" name="q6" value="E"> <b>E</b> – Reage com crises intensas e ritualísticas, precisa de previsibilidade.</label>
-        <label><input type="radio" name="q6" value="F"> <b>F</b> – Reage com choro ou protesto proporcionais e melhora com acolhimento.</label>
-    </div>
+  <fieldset>
+    <legend>8. Quando frustrada ou contrariada, a criança:</legend>
+    <label><input type="checkbox" name="q8" value="A" /> A) Chora, grita, reage com birras intensas.</label>
+    <label><input type="checkbox" name="q8" value="B" /> B) Fecha-se, isola-se ou tem crises mais rígidas.</label>
+    <label><input type="checkbox" name="q8" value="C" /> C) Tenta argumentar, mesmo sendo pequena.</label>
+    <label><input type="checkbox" name="q8" value="D" /> D) Explode emocionalmente, mas logo tenta retomar o controle com ideias criativas.</label>
+    <label><input type="checkbox" name="q8" value="E" /> E) Demonstra respostas intensas e rígidas a contrariedades.</label>
+    <label><input type="checkbox" name="q8" value="F" /> F) Responde de forma adequada e proporcional à idade.</label>
+  </fieldset>
 
-    <button class="calculate-button" onclick="calculateResults()">Ver Meu Perfil</button>
+  <fieldset>
+    <legend>9. Como a criança se comporta em situações de grupo?</legend>
+    <label><input type="checkbox" name="q9" value="A" /> A) Impulsiva, competitiva, tem dificuldade de esperar a vez.</label>
+    <label><input type="checkbox" name="q9" value="B" /> B) Isolada, pouco interesse em interação social.</label>
+    <label><input type="checkbox" name="q9" value="C" /> C) Participativa e colaborativa, com iniciativa.</label>
+    <label><input type="checkbox" name="q9" value="D" /> D) Sociável, mas com dificuldade para manter atenção e seguir regras.</label>
+    <label><input type="checkbox" name="q9" value="E" /> E) Apresenta comportamentos rígidos e dificuldade em se adaptar ao grupo.</label>
+    <label><input type="checkbox" name="q9" value="F" /> F) Interage adequadamente, respeitando regras e colegas.</label>
+  </fieldset>
 
-    <hr>
+  <fieldset>
+    <legend>10. Como a criança regula sua atividade motora?</legend>
+    <label><input type="checkbox" name="q10" value="A" /> A) Ativa demais, inquieta, com dificuldade para ficar parada.</label>
+    <label><input type="checkbox" name="q10" value="B" /> B) Movimentos repetitivos ou estereotipados.</label>
+    <label><input type="checkbox" name="q10" value="C" /> C) Coordenação motora boa e interesse em atividades variadas.</label>
+    <label><input type="checkbox" name="q10" value="D" /> D) Energia alta, porém com interesse criativo nas atividades.</label>
+    <label><input type="checkbox" name="q10" value="E" /> E) Dificuldade em regular o nível de atividade motora.</label>
+    <label><input type="checkbox" name="q10" value="F" /> F) Atividade física adequada para a idade e desenvolvimento.</label>
+  </fieldset>
 
-    <h2>Tabela de Pontuação</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Letra</th>
-                <th>Total de Marcas</th>
-                <th>Indicação</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>A</td>
-                <td id="totalA">0</td>
-                <td>TDAH</td>
-            </tr>
-            <tr>
-                <td>B</td>
-                <td id="totalB">0</td>
-                <td>TEA</td>
-            </tr>
-            <tr>
-                <td>C</td>
-                <td id="totalC">0</td>
-                <td>AHSD (Altas Habilidades)</td>
-            </tr>
-            <tr>
-                <td>D</td>
-                <td id="totalD">0</td>
-                <td>TDAH + AHSD</td>
-            </tr>
-            <tr>
-                <td>E</td>
-                <td id="totalE">0</td>
-                <td>TDAH + TEA</td>
-            </tr>
-            <tr>
-                <td>F</td>
-                <td id="totalF">0</td>
-                <td>Neurotípica</td>
-            </tr>
-        </tbody>
-    </table>
+  <fieldset>
+    <legend>11. Como reage a mudanças na rotina?</legend>
+    <label><input type="checkbox" name="q11" value="A" /> A) Reage com irritação e impulsividade.</label>
+    <label><input type="checkbox" name="q11" value="B" /> B) Resiste fortemente e fica ansiosa.</label>
+    <label><input type="checkbox" name="q11" value="C" /> C) Adapta-se rapidamente, com curiosidade.</label>
+    <label><input type="checkbox" name="q11" value="D" /> D) Reage intensamente, mas tenta se adaptar com apoio.</label>
+    <label><input type="checkbox" name="q11" value="E" /> E) Dificuldade extrema em aceitar mudanças.</label>
+    <label><input type="checkbox" name="q11" value="F" /> F) Adapta-se bem a novas situações e mudanças.</label>
+  </fieldset>
 
-    <hr>
+  <fieldset>
+    <legend>12. Qual é a resposta da criança a estímulos sensoriais (sons, luzes, texturas)?</legend>
+    <label><input type="checkbox" name="q12" value="A" /> A) Reage com agitação e irritabilidade.</label>
+    <label><input type="checkbox" name="q12" value="B" /> B) Tem respostas atípicas, como evitar ou se fixar em certos estímulos.</label>
+    <label><input type="checkbox" name="q12" value="C" /> C) Curiosa e exploradora, responde adequadamente.</label>
+    <label><input type="checkbox" name="q12" value="D" /> D) Mistura respostas intensas com exploração sensorial.</label>
+    <label><input type="checkbox" name="q12" value="E" /> E) Sensibilidade sensorial acentuada, com reações fortes.</label>
+    <label><input type="checkbox" name="q12" value="F" /> F) Responde adequadamente aos estímulos, sem reações extremas.</label>
+  </fieldset>
 
-    <div class="interpretation-section" id="interpretationSection">
-        <h2>Interpretação dos Resultados</h2>
+  <button type="button" id="mapear-btn">🧩 Mapear Perfil</button>
+</form>
 
-        <div class="interpretation-item tdah" id="interpA">
-  <h3>🔵 Maioria A – TDAH <span>(Transtorno de Déficit de Atenção e Hiperatividade)</span></h3>
-  <p>A criança pode apresentar impulsividade, agitação e dificuldades de atenção, mas mantém interação social.</p>
-  <h4>⚠️ Importante</h4>
-  <p>Procure um profissional especializado, como psicólogo infantil ou neuropediatra, para avaliação e orientação.</p>
-  <h4>🛠️ Recomendações para família e educadores</h4>
-  <ul>
-    <li>Mantenha rotina estruturada e previsível.</li>
-    <li>Use comandos curtos e claros.</li>
-    <li>Estimule atividades físicas regulares.</li>
-    <li>Reforce comportamentos positivos com elogios.</li>
-    <li>Tenha empatia e paciência na condução do dia a dia.</li>
-  </ul>
+<!-- Modal -->
+<div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div id="modal">
+    <h3 id="modal-title">Resultado do KidsMap</h3>
+    <div id="modal-content"></div>
+    <button id="close-modal">Fechar</button>
+  </div>
 </div>
 
-<div class="interpretation-item tea" id="interpB">
-  <h3>🟣 Maioria B – TEA <span>(Transtorno do Espectro Autista)</span></h3>
-  <p>Indica dificuldades sociais, comunicação atípica, interesses restritos e comportamentos sensoriais específicos.</p>
-  <h4>⚠️ Importante</h4>
-  <p>Busque avaliação com equipe multidisciplinar: fonoaudiólogo, psicólogo e terapeuta ocupacional.</p>
-  <h4>🛠️ Recomendações para família e educadores</h4>
-  <ul>
-    <li>Utilize imagens e rotinas visuais para facilitar a compreensão.</li>
-    <li>Evite mudanças bruscas no ambiente.</li>
-    <li>Estimule a socialização com jogos simples e estruturados.</li>
-    <li>Seja paciente e ofereça um ambiente acolhedor.</li>
-  </ul>
-</div>
+<script>
+  const mensagens = {
+    A: {
+      titulo: '🧩 Maioria A – TDAH',
+      texto: [
+        '⚡ Pode apresentar impulsividade, agitação motora, dificuldade para seguir regras e atenção dispersa, mas mantém interação social.',
+        '📌 Recomendação: Manter rotina estruturada e previsível, usar comandos curtos, estimular atividades físicas controladas e reforçar comportamentos positivos.',
+        '💬 Mensagem para família e educadores: Ofereça apoio psicopedagógico para ajudar na autorregulação e incentive atividades que favoreçam concentração e controle emocional.'
+      ]
+    },
+    B: {
+      titulo: '🧩 Maioria B – TEA',
+      texto: [
+        '🧩 Aponta para dificuldades sociais, interesses restritos, comunicação atípica ou repetitiva e comportamentos sensoriais específicos.',
+        '📌 Recomendação: Utilizar imagens e rotinas visuais, evitar mudanças bruscas, estimular interação social com jogos simples e buscar acompanhamento multidisciplinar.',
+        '💬 Mensagem para família e educadores: Promova adaptações escolares individualizadas e um ambiente acolhedor que respeite o ritmo da criança.'
+      ]
+    },
+    C: {
+      titulo: '🧩 Maioria C – AHSD',
+      texto: [
+        '💡 Sugere desenvolvimento precoce em áreas cognitivas, criatividade e interesse intenso por temas específicos.',
+        '📌 Recomendação: Oferecer estímulos desafiadores e variados, respeitar o ritmo emocional e estimular convivência social sem pressão.',
+        '💬 Mensagem para família e educadores: Busque avaliação psicopedagógica para enriquecimento curricular e crie espaço para expressão criativa.'
+      ]
+    },
+    D: {
+      titulo: '🧩 Maioria D – TDAH + AHSD',
+      texto: [
+        '⚡💡 Pode apresentar alta capacidade intelectual combinada com agitação, impulsividade e desorganização.',
+        '📌 Recomendação: Combinar estratégias de estrutura para TDAH com liberdade criativa para AHSD, propondo metas visuais e pausas regulares.',
+        '💬 Mensagem para família e educadores: Estimule o autoconhecimento por meio de atividades expressivas e trabalhe a tolerância à frustração com afeto.'
+      ]
+    },
+    E: {
+      titulo: '🧩 Maioria E – TDAH + TEA',
+      texto: [
+        '⚡🧩 Pode apresentar comportamentos rígidos, impulsivos, fala desorganizada e sensibilidade sensorial acentuada.',
+        '📌 Recomendação: A avaliação interdisciplinar (psicólogo, terapeuta ocupacional, fonoaudiólogo) é fundamental para desenvolver um plano de intervenção integrado.',
+        '💬 Mensagem para família e educadores: Tenha um olhar acolhedor, promovendo rotinas estruturadas e adaptações respeitosas para o desenvolvimento social e emocional.'
+      ]
+    },
+    F: {
+      titulo: '🧩 Maioria F – Neurotípico',
+      texto: [
+        '✅ Desenvolvimento dentro do esperado para a idade, com adaptação social e emocional adequada.',
+        '📌 Recomendação: Manter ambiente equilibrado e estímulos adequados para a faixa etária.',
+        '💬 Mensagem para família e educadores: Continue promovendo um ambiente de segurança, afeto e oportunidades para aprendizado saudável.'
+      ]
+    }
+  };
 
-<div class="interpretation-item ahsd" id="interpC">
-  <h3>🟢 Maioria C – AHSD <span>(Altas Habilidades / Superdotação)</span></h3>
-  <p>Apresenta desenvolvimento avançado, criatividade e interesse profundo em temas específicos.</p>
-  <h4>⚠️ Importante</h4>
-  <p>Procure avaliação psicopedagógica para orientações específicas e enriquecimento curricular.</p>
-  <h4>🛠️ Recomendações para família e educadores</h4>
-  <ul>
-    <li>Ofereça estímulos variados e desafiadores.</li>
-    <li>Respeite o ritmo emocional da criança.</li>
-    <li>Promova convivência social sem pressão.</li>
-    <li>Estimule a criatividade por meio de atividades abertas.</li>
-  </ul>
-</div>
+  const modalOverlay = document.getElementById('modal-overlay');
+  const modalContent = document.getElementById('modal-content');
+  const closeModalBtn = document.getElementById('close-modal');
 
-<div class="interpretation-item tdah-ahsd" id="interpD">
-  <h3>🟠 Maioria D – TDAH + AHSD</h3>
-  <p>Combina alta capacidade intelectual com agitação, impulsividade e desorganização emocional.</p>
-  <h4>⚠️ Importante</h4>
-  <p>Procure acompanhamento com psicólogo infantil e neuropediatra para abordagem integrada.</p>
-  <h4>🛠️ Recomendações para família e educadores</h4>
-  <ul>
-    <li>Combine estrutura firme com liberdade criativa.</li>
-    <li>Use projetos curtos com metas visuais.</li>
-    <li>Estimule o autoconhecimento e a expressão emocional.</li>
-    <li>Trabalhe a tolerância à frustração com carinho e paciência.</li>
-  </ul>
-</div>
+  document.getElementById('mapear-btn').addEventListener('click', () => {
+    const form = document.getElementById('kidsmap-form');
+    let perfilCounts = { A:0, B:0, C:0, D:0, E:0, F:0 };
 
-<div class="interpretation-item tdah-tea" id="interpE">
-  <h3>🔴 Maioria E – TDAH + TEA</h3>
-  <p>Apresenta comportamentos rígidos e impulsivos, fala desorganizada, sensorialidade intensa e desatenção marcada.</p>
-  <h4>⚠️ Importante</h4>
-  <p>Busque acompanhamento interdisciplinar com fonoaudiólogo, terapeuta ocupacional, psicólogo e pedagogo.</p>
-  <h4>🛠️ Recomendações para família e educadores</h4>
-  <ul>
-    <li>Implemente rotinas estruturadas e comunicação visual.</li>
-    <li>Reforce habilidades sociais com mediação cuidadosa.</li>
-    <li>Adapte o ambiente escolar conforme necessidades específicas.</li>
-    <li>Pratique a empatia e acolhimento constantes.</li>
-  </ul>
-</div>
+    // Validar se todas as perguntas têm pelo menos uma opção marcada
+    for (let i = 1; i <= 12; i++) {
+      const checked = form.querySelectorAll(`input[name="q${i}"]:checked`);
+      if (checked.length === 0) {
+        alert(`Por favor, selecione pelo menos uma opção para a pergunta ${i}.`);
+        return;
+      }
+      checked.forEach(chk => perfilCounts[chk.value]++);
+    }
 
-<div class="interpretation-item neurotipico" id="interpF">
-  <h3>⚪ Maioria F – Neurotípica</h3>
-  <p>Desenvolvimento típico para a idade, com reações emocionais e sociais dentro do esperado.</p>
-  <h4>⚠️ Importante</h4>
-  <p>Mantenha observação contínua e busque orientação se notar mudanças significativas.</p>
-  <h4>🛠️ Recomendações para família e educadores</h4>
-  <ul>
-    <li>Estimule o desenvolvimento com brincadeiras e interações variadas.</li>
-    <li>Ofereça ambiente seguro e rico em oportunidades de aprendizado.</li>
-    <li>Garanta rotinas saudáveis de sono, alimentação e atividades físicas.</li>
-    <li>Incentive a autonomia e resolução de pequenos desafios.</li>
-    <li>Seja sempre paciente e compreensivo no acompanhamento diário.</li>
-  </ul>
-</div>
-    </div>
+    // Determinar perfil predominante
+    let maxCount = 0;
+    let perfilPredominante = null;
+    for (const perfil in perfilCounts) {
+      if (perfilCounts[perfil] > maxCount) {
+        maxCount = perfilCounts[perfil];
+        perfilPredominante = perfil;
+      }
+    }
 
-    <script>
-        function calculateResults() {
-            let counts = { A: 0, B: 0, C: 0, D: 0, E: 0, F: 0 };
-            const questions = document.querySelectorAll('.question');
-            let allAnswered = true; // Flag para verificar se todas as perguntas foram respondidas
+    // Preparar conteúdo do modal
+    const msg = mensagens[perfilPredominante];
+    let html = `<h3>${msg.titulo}</h3>`;
+    msg.texto.forEach(paragrafo => {
+      html += `<p>${paragrafo}</p>`;
+    });
 
-            // Mapeia os IDs dos totais na tabela
-            const totalIds = { A: 'totalA', B: 'totalB', C: 'totalC', D: 'totalD', E: 'totalE', F: 'totalF' };
-            // Mapeia os IDs das interpretações
-            const interpIds = { A: 'interpA', B: 'interpB', C: 'interpC', D: 'interpD', E: 'interpE', F: 'interpF' };
-            // Define a ordem para exibir as interpretações em caso de empate
-            const order = ['A', 'B', 'C', 'D', 'E', 'F'];
+    modalContent.innerHTML = html;
+    modalOverlay.style.display = 'flex';
+    modalOverlay.focus();
+  });
 
-            questions.forEach(question => {
-                // Pega o nome do grupo de radio buttons para aquela pergunta (ex: 'q1', 'q2')
-                const questionName = question.querySelector('input[type="radio"]').name;
-                const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+  closeModalBtn.addEventListener('click', () => {
+    modalOverlay.style.display = 'none';
+  });
 
-                if (selectedOption) {
-                    counts[selectedOption.value]++;
-                } else {
-                    allAnswered = false; // Se alguma pergunta não foi respondida
-                }
-            });
+  // Fechar modal ao clicar fora da caixa
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+      modalOverlay.style.display = 'none';
+    }
+  });
 
-            if (!allAnswered) {
-                alert("Por favor, responda a todas as perguntas para ver o perfil completo.");
-                return; // Impede a execução do restante da função
-            }
-
-            // Atualiza a tabela de pontuação
-            for (const letter in counts) {
-                document.getElementById(totalIds[letter]).textContent = counts[letter];
-            }
-
-            // Oculta todas as interpretações primeiro
-            document.querySelectorAll('.interpretation-item').forEach(item => {
-                item.style.display = 'none';
-            });
-
-            // Encontra a letra(s) com maior contagem
-            let maxCount = -1; // Começa com -1 para garantir que 0 seja maior que o inicial
-            let dominantLetters = [];
-
-            order.forEach(letter => {
-                if (counts[letter] > maxCount) {
-                    maxCount = counts[letter];
-                    dominantLetters = [letter];
-                } else if (counts[letter] === maxCount && maxCount > 0) {
-                    dominantLetters.push(letter);
-                }
-            });
-
-            // Se todas as contagens forem zero (o que não deve acontecer se allAnswered for true),
-            // ou se houver um empate geral de zeros (improvável com as perguntas existentes)
-            // podemos adicionar uma lógica para exibir uma mensagem padrão ou todos,
-            // mas com allAnswered = true, sempre haverá alguma contagem > 0.
-
-            // Exibe apenas a(s) interpretação(ões) dominante(s)
-            if (dominantLetters.length > 0) {
-                dominantLetters.forEach(letter => {
-                    const interpretationElement = document.getElementById(interpIds[letter]);
-                    if (interpretationElement) {
-                        interpretationElement.style.display = 'block';
-                    }
-                });
-                // Rola para a seção de interpretação após exibir
-                document.getElementById('interpretationSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-    </script>
+  // Fechar modal com ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay.style.display === 'flex') {
+      modalOverlay.style.display = 'none';
+    }
+  });
+</script>
 
 </body>
 </html>
