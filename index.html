@@ -10,7 +10,7 @@
             line-height: 1.6;
             color: #333;
             margin: 0 auto;
-            max-width: 800px;
+            max-width: 400px;
             padding: 20px;
             background-color: #f4f7f6;
         }
@@ -154,6 +154,8 @@
         .interpretation-item.ahsd { border-color: #ffc107; } /* Amarelo */
         .interpretation-item.tdah-ahsd { border-color: #6f42c1; } /* Roxo */
         .interpretation-item.tdah-tea { border-color: #fd7e14; } /* Laranja */
+        .interpretation-item.neurotipico { border-color: #28a745; } /* Verde para Neurotípico */
+
 
         .interpretation-item h3 {
             margin-top: 0;
@@ -184,122 +186,86 @@
 
     <div class="page-break"></div>
 
-    <h1>✅ KidsMap: Checklist de Observação Infantil<br>– Perfil Comportamental (0 a 4 anos)</h1>
+    <h1>✅ **CHECKLIST DE OBSERVAÇÃO INFANTIL – PERFIL COMPORTAMENTAL (0 A 4 ANOS)**</h1>
+    <h2 style="text-align: center; margin-top: -15px;">Versão ampliada e multifatorial</h2>
 
     <div class="instructions">
-        <p><strong>Instruções:</strong></p>
-        <p>Marque apenas *uma alternativa por pergunta*. Ao final, clique em "Ver Meu Perfil" para calcular os resultados. O total de cada letra (A, B, C, D ou E) será exibido na tabela e a interpretação correspondente será destacada.</p>
-        <p class="note"><em>Este material tem caráter informativo e não substitui avaliação clínica ou pedagógica profissional.</em></p>
+        <h3>**Instruções**</h3>
+        <ul>
+            <li>Responda com base na observação frequente e atual da criança (últimos 3 meses).</li>
+            <li>Marque apenas **uma alternativa por item**, aquela que **melhor representa** o comportamento predominante.</li>
+            <li>Ao final, conte quantas vezes cada letra foi marcada.</li>
+            <li>Veja a interpretação dos perfis e sugestões práticas.</li>
+        </ul>
+        <p class="note"><em>*Este material tem caráter informativo e não substitui avaliação clínica ou pedagógica profissional.</em></p>
     </div>
 
     <hr>
 
     <div class="question">
-        <h4>1. Como é o padrão de sono da criança?</h4>
-        <label><input type="radio" name="q1" value="A"> <b>A)</b> Acorda várias vezes, resiste a dormir, parece sempre agitada.</label>
-        <label><input type="radio" name="q1" value="B"> <b>B)</b> Dorme em horários imprevisíveis ou em excesso; acorda desorientada.</label>
-        <label><input type="radio" name="q1" value="C"> <b>C)</b> Dorme pouco, mas acorda alerta e com ideias criativas.</label>
-        <label><input type="radio" name="q1" value="D"> <b>D)</b> Dorme superficialmente, acorda inquieta e já começa a explorar tudo.</label>
-        <label><input type="radio" name="q1" value="E"> <b>E)</b> Dorme mal, tem agitação motora e desperta com irritação ou desorientação.</label>
+        <h4>1. Comunicação verbal e linguagem</h4>
+        <p>Como a criança se comunica quando quer algo?</p>
+        <label><input type="radio" name="q1" value="A"> <b>A</b> – Interrompe, grita ou fala de forma impulsiva, sem considerar se está sendo ouvida.</label>
+        <label><input type="radio" name="q1" value="B"> <b>B</b> – Evita o contato verbal, usa poucas palavras ou prefere gestos e sons repetitivos.</label>
+        <label><input type="radio" name="q1" value="C"> <b>C</b> – Fala de forma excessiva, com tom firme e discurso argumentativo, mesmo que seja pequena.</label>
+        <label><input type="radio" name="q1" value="D"> <b>D</b> – Alterna entre fala impulsiva e falas muito controladas, dependendo do ambiente.</label>
+        <label><input type="radio" name="q1" value="E"> <b>E</b> – Demonstra falas fora de contexto, fixação em temas específicos e fala repetitiva.</label>
+        <label><input type="radio" name="q1" value="F"> <b>F</b> – Usa palavras adequadas para a idade, com variação emocional e crescimento gradual do vocabulário.</label>
     </div>
 
     <div class="question">
-        <h4>2. Como lida com brinquedos e objetos?</h4>
-        <label><input type="radio" name="q2" value="A"> <b>A)</b> Troca de brinquedo a todo momento, sem foco nem continuidade.</label>
-        <label><input type="radio" name="q2" value="B"> <b>B)</b> Brinca de forma repetitiva (alinhando, girando), sem variar.</label>
-        <label><input type="radio" name="q2" value="C"> <b>C)</b> Inventa histórias longas, cria com originalidade.</label>
-        <label><input type="radio" name="q2" value="D"> <b>D)</b> Cria ideias interessantes, mas muda de foco sem terminar.</label>
-        <label><input type="radio" name="q2" value="E"> <b>E)</b> Mistura formas rígidas e repetitivas com impulsividade e desorganização.</label>
+        <h4>2. Atenção e foco</h4>
+        <p>Como é a atenção da criança durante atividades dirigidas (como contar uma história)?</p>
+        <label><input type="radio" name="q2" value="A"> <b>A</b> – Perde o foco rapidamente, levanta, distrai-se com qualquer estímulo.</label>
+        <label><input type="radio" name="q2" value="B"> <b>B</b> – Não se envolve ou se distancia do grupo, mesmo sem distrações visíveis.</label>
+        <label><input type="radio" name="q2" value="C"> <b>C)</b> Parece atenta, mas desvia o foco para questionar, comandar ou comentar fora de hora.</label>
+        <label><input type="radio" name="q2" value="D"> <b>D</b> – Alterna entre agitação e retraimento; tem dificuldade tanto para focar quanto para interagir.</label>
+        <label><input type="radio" name="q2" value="E"> <b>E</b> – Foca por longos períodos, mas apenas em temas específicos, ignorando o restante.</label>
+        <label><input type="radio" name="q2" value="F"> <b>F</b> – Participa com atenção compatível à idade e responde conforme a complexidade da tarefa.</label>
     </div>
 
     <div class="question">
-        <h4>3. Em contato com outras crianças, geralmente:</h4>
-        <label><input type="radio" name="q3" value="A"> <b>A)</b> É impulsiva, empurra, interrompe e não espera a vez.</label>
-        <label><input type="radio" name="q3" value="B"> <b>B)</b> Prefere brincar sozinha ou ignora os demais.</label>
-        <label><input type="radio" name="q3" value="C"> <b>C)</b> Lidera brincadeiras, conversa bastante com crianças e adultos.</label>
-        <label><input type="radio" name="q3" value="D"> <b>D)</b> Tenta se enturmar, mas se frustra por não ser compreendida.</label>
-        <label><input type="radio" name="q3" value="E"> <b>E)</b> Alterna entre evitar o grupo e agir de forma impulsiva ou confusa.</label>
+        <h4>3. Sensibilidade sensorial</h4>
+        <p>Como a criança reage a sons altos, roupas ou texturas de alimentos?</p>
+        <label><input type="radio" name="q3" value="A"> <b>A</b> – Pode reclamar ou reagir impulsivamente, mas volta à atividade rapidamente.</label>
+        <label><input type="radio" name="q3" value="B"> <b>B</b> – Evita certos sons, cheiros, texturas com forte resistência, choro ou isolamento.</label>
+        <label><input type="radio" name="q3" value="C"> <b>C</b> – Tolera bem, mas prefere controlar como será exposta (ex: exige roupas específicas).</label>
+        <label><input type="radio" name="q3" value="D"> <b>D</b> – Mostra sensibilidade variável, às vezes extrema, às vezes indiferente.</label>
+        <label><input type="radio" name="q3" value="E"> <b>E</b> – Fica fixada em certos estímulos sensoriais ou tem aversão intensa a estímulos suaves.</label>
+        <label><input type="radio" name="q3" value="F"> <b>F</b> – Tolera bem a maioria dos estímulos, com pequenas reações dentro do esperado para a idade.</label>
     </div>
 
     <div class="question">
-        <h4>4. Como se comunica?</h4>
-        <label><input type="radio" name="q4" value="A"> <b>A)</b> Fala sem parar, interrompe, muda de assunto abruptamente.</label>
-        <label><input type="radio" name="q4" value="B"> <b>B)</b> Fala pouco, com entonação diferente, repete frases ou palavras.</label>
-        <label><input type="radio" name="q4" value="C"> <b>C)</b> Usa vocabulário elaborado, gosta de conversar sobre temas profundos.</label>
-        <label><input type="radio" name="q4" value="D"> <b>D)</b> Fala bem, mas atropela ideias e fala muito rápido.</label>
-        <label><input type="radio" name="q4" value="E"> <b>E)</b> Pode falar muito ou pouco, com comunicação desorganizada ou fora de contexto.</label>
+        <h4>4. Comportamento social</h4>
+        <p>Como a criança interage com outras crianças e adultos em contextos variados?</p>
+        <label><input type="radio" name="q4" value="A"> <b>A</b> – Tenta chamar atenção, interrompe, se frustra facilmente e reage com birra.</label>
+        <label><input type="radio" name="q4" value="B"> <b>B</b> – Evita interações ou se isola, mesmo quando encorajada.</label>
+        <label><input type="radio" name="q4" value="C"> <b>C</b> – Busca liderar ou controlar a brincadeira, tem dificuldade em aceitar regras sociais.</label>
+        <label><input type="radio" name="q4" value="D"> <b>D</b> – Oscila entre busca por atenção e retraimento, com respostas desproporcionais.</label>
+        <label><input type="radio" name="q4" value="E"> <b>E</b> – Faz interações mecânicas ou repetitivas, com pouca empatia ou reciprocidade.</label>
+        <label><input type="radio" name="q4" value="F"> <b>F</b> – Demonstra interesse, imita os pares, busca companhia e responde com empatia crescente.</label>
     </div>
 
     <div class="question">
-        <h4>5. Quanto à atenção e foco em tarefas ou histórias:</h4>
-        <label><input type="radio" name="q5" value="A"> <b>A)</b> Distrai-se com qualquer estímulo, abandona atividades no meio.</label>
-        <label><input type="radio" name="q5" value="B"> <b>B)</b> Foca de forma intensa em um só tema, ignorando o resto.</label>
-        <label><input type="radio" name="q5" value="C"> <b>C)</b> Consegue focar por muito tempo quando algo desperta seu interesse.</label>
-        <label><input type="radio" name="q5" value="D"> <b>D)</b> Alterna entre hiperfoco e desatenção; prefere estímulos criativos.</label>
-        <label><input type="radio" name="q5" value="E"> <b>E)</b> Tem dificuldade com foco em grupo; ou hiperfoca ou desorganiza tudo.</label>
+        <h4>5. Alimentação</h4>
+        <p>Como a criança lida com a hora da alimentação?</p>
+        <label><input type="radio" name="q5" value="A"> <b>A</b> – Come com pressa ou distraída, larga a comida para fazer outra coisa.</label>
+        <label><input type="radio" name="q5" value="B"> <b>B</b> – Tem aversão a várias texturas, recusa alimentos com reações fortes.</label>
+        <label><input type="radio" name="q5" value="C"> <b>C</b> – Quer escolher o cardápio, protesta quando não está do seu jeito.</label>
+        <label><input type="radio" name="q5" value="D"> <b>D</b> – Alterna entre recusa intensa e episódios de comer em excesso ou impulsivamente.</label>
+        <label><input type="radio" name="q5" value="E"> <b>E</b> – Come apenas alimentos restritos e fixos, com alto apego ritualístico.</label>
+        <label><input type="radio" name="q5" value="F"> <b>F</b> – Pode ter preferências, mas come bem na maioria dos dias, com variedade.</label>
     </div>
 
     <div class="question">
-        <h4>6. Como reage a regras e limites?</h4>
-        <label><input type="radio" name="q6" value="A"> <b>A)</b> Reage com oposição, ignora ou desafia frequentemente.</label>
-        <label><input type="radio" name="q6" value="B"> <b>B)</b> Não aceita mudanças, fica irritada se a rotina muda.</label>
-        <label><input type="radio" name="q6" value="C"> <b>C)</b> Questiona com lógica e tenta negociar alternativas.</label>
-        <label><input type="radio" name="q6" value="D"> <b>D)</b> Questiona, se frustra, mas se adapta se convencida.</label>
-        <label><input type="radio" name="q6" value="E"> <b>E)</b> Tem reações intensas a regras e frustrações, com rigidez ou rebeldia.</label>
-    </div>
-
-    <div class="question">
-        <h4>7. Quais habilidades cognitivas chamam mais atenção?</h4>
-        <label><input type="radio" name="q7" value="A"> <b>A)</b> Esperta, mas com desempenho geral dentro do esperado.</label>
-        <label><input type="radio" name="q7" value="B"> <b>B)</b> Avanço em algumas áreas e atraso significativo em outras.</label>
-        <label><input type="radio" name="q7" value="C"> <b>C)</b> Raciocínio lógico precoce, memória excelente, vocabulário vasto.</label>
-        <label><input type="radio" name="q7" value="D"> <b>D)</b> Muito criativa, com bom raciocínio e linguagem elaborada.</label>
-        <label><input type="radio" name="q7" value="E"> <b>E)</b> Alterna entre capacidades muito altas e dificuldades evidentes.</label>
-    </div>
-
-    <div class="question">
-        <h4>8. Quando é contrariada ou frustrada, a criança:</h4>
-        <label><input type="radio" name="q8" value="A"> <b>A)</b> Grita, chora, reage de forma exagerada ou agressiva.</label>
-        <label><input type="radio" name="q8" value="B"> <b>B)</b> Se isola ou tem crises mais rígidas e difíceis de controlar.</label>
-        <label><input type="radio" name="q8" value="C"> <b>C)</b> Argumenta, tenta entender e convencer.</label>
-        <label><input type="radio" name="q8" value="D"> <b>D)</b> Explode emocionalmente, mas tenta se reorganizar.</label>
-        <label><input type="radio" name="q8" value="E"> <b>E)</b> Pode explodir ou se fechar, com dificuldade de autorregulação.</label>
-    </div>
-
-    <div class="question">
-        <h4>9. Como lida com sons, cheiros, texturas ou roupas?</h4>
-        <label><input type="radio" name="q9" value="A"> <b>A)</b> Tem reações exageradas a barulhos ou texturas, mas sem padrão.</label>
-        <label><input type="radio" name="q9" value="B"> <b>B)</b> É extremamente sensível a estímulos sensoriais (luz, som, textura).</label>
-        <label><input type="radio" name="q9" value="C"> <b>C)</b> Tem curiosidade sensorial, mas sem incômodo.</label>
-        <label><input type="radio" name="q9" value="D"> <b>D)</b> Mostra seletividade, mas se adapta bem com diálogo.</label>
-        <label><input type="radio" name="q9" value="E"> <b>E)</b> Alterna entre hiper-reatividade e busca excessiva de estímulos.</label>
-    </div>
-
-    <div class="question">
-        <h4>10. Como se alimenta?</h4>
-        <label><input type="radio" name="q10" value="A"> <b>A)</b> Come sem atenção, brinca com o alimento, dispersa-se fácil.</label>
-        <label><input type="radio" name="q10" value="B"> <b>B)</b> É seletiva, rejeita certos alimentos com forte reação.</label>
-        <label><input type="radio" name="q10" value="C"> <b>C)</b> Explora novos sabores, tem paladar variado.</label>
-        <label><input type="radio" name="q10" value="D"> <b>D)</b> Quer experimentar tudo, mas pula etapas e se distrai.</label>
-        <label><input type="radio" name="q10" value="E"> <b>E)</b> Come bem em alguns dias, e em outros se recusa completamente ou age com rigidez.</label>
-    </div>
-
-    <div class="question">
-        <h4>11. Como é a autonomia para idade? (troca de roupa, higiene, alimentação)</h4>
-        <label><input type="radio" name="q11" value="A"> <b>A)</b> É dependente, se irrita com tarefas sozinha.</label>
-        <label><input type="radio" name="q11" value="B"> <b>B)</b> Insiste em fazer do seu jeito, mesmo se for inadequado.</label>
-        <label><input type="radio" name="q11" value="C"> <b>C)</b> Mostra autonomia precoce e segurança nas tarefas.</label>
-        <label><input type="radio" name="q11" value="D"> <b>D)</b> Tenta ser autônoma, mas se frustra com erros.</label>
-        <label><input type="radio" name="q11" value="E"> <b>E)</b> Alterna entre dependência total e insistência em fazer tudo sozinha com rigidez.</label>
-    </div>
-
-    <div class="question">
-        <h4>12. Como usa a imaginação?</h4>
-        <label><input type="radio" name="q12" value="A"> <b>A)</b> Cria histórias, mas com pouca sequência ou coesão.</label>
-        <label><input type="radio" name="q12" value="B"> <b>B)</b> Brinca pouco com imaginação, prefere repetir ações.</label>
-        <label><input type="radio" name="q12" value="C"> <b>C)</b> Tem mundo imaginativo rico, cria personagens, histórias e ideias novas.</label>
-        <label><input type="radio" name="q12" value="D"> <b>D)</b> É criativa, mas as histórias são rápidas e desorganizadas.</label>
-        <label><input type="radio" name="q12" value="E"> <b>E)</b> Mistura criatividade com repetições ou ideias desconexas.</label>
+        <h4>6. Reações emocionais</h4>
+        <p>Como reage a frustrações e mudanças na rotina?</p>
+        <label><input type="radio" name="q6" value="A"> <b>A</b> – Explode facilmente, chora, grita, mas se acalma com mediação.</label>
+        <label><input type="radio" name="q6" value="B"> <b>B</b> – Pode não reagir visivelmente, mas se fecha ou repete comportamentos.</label>
+        <label><input type="radio" name="q6" value="C"> <b>C</b> – Protesta de forma argumentativa, desafia ou manipula a situação.</label>
+        <label><input type="radio" name="q6" value="D"> <b>D</b> – Reage com ansiedade ou confusão, com dificuldade de nomear o que sente.</label>
+        <label><input type="radio" name="q6" value="E"> <b>E</b> – Reage com crises intensas e ritualísticas, precisa de previsibilidade.</label>
+        <label><input type="radio" name="q6" value="F"> <b>F</b> – Reage com choro ou protesto proporcionais e melhora com acolhimento.</label>
     </div>
 
     <button class="calculate-button" onclick="calculateResults()">Ver Meu Perfil</button>
@@ -340,6 +306,11 @@
                 <td>E</td>
                 <td id="totalE">0</td>
                 <td>TDAH + TEA</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td id="totalF">0</td>
+                <td>Neurotípica</td>
             </tr>
         </tbody>
     </table>
@@ -408,33 +379,55 @@
                 <li>Adaptações educacionais com planejamento individual</li>
             </ul>
         </div>
+
+        <div class="interpretation-item neurotipico" id="interpF">
+            <h3>⚪ Maioria F – Neurotípica</h3>
+            <p>Apresenta desenvolvimento típico para a idade, com marcos e reações emocionais dentro do esperado.</p>
+            <p><strong>Intervenções:</strong></p>
+            <ul>
+                <li>Continuar estimulando o desenvolvimento através de brincadeiras e interações variadas.</li>
+                <li>Promover um ambiente seguro e rico em oportunidades de aprendizado e exploração.</li>
+                <li>Manter rotinas saudáveis de sono, alimentação e atividade física.</li>
+                <li>Estimular a autonomia progressiva e a resolução de pequenos problemas.</li>
+                <li>Observar continuamente, pois o desenvolvimento é um processo dinâmico.</li>
+            </ul>
+        </div>
     </div>
 
     <script>
         function calculateResults() {
-            let counts = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+            let counts = { A: 0, B: 0, C: 0, D: 0, E: 0, F: 0 };
             const questions = document.querySelectorAll('.question');
             let allAnswered = true; // Flag para verificar se todas as perguntas foram respondidas
 
+            // Mapeia os IDs dos totais na tabela
+            const totalIds = { A: 'totalA', B: 'totalB', C: 'totalC', D: 'totalD', E: 'totalE', F: 'totalF' };
+            // Mapeia os IDs das interpretações
+            const interpIds = { A: 'interpA', B: 'interpB', C: 'interpC', D: 'interpD', E: 'interpE', F: 'interpF' };
+            // Define a ordem para exibir as interpretações em caso de empate
+            const order = ['A', 'B', 'C', 'D', 'E', 'F'];
+
             questions.forEach(question => {
-                const selectedOption = question.querySelector('input[type="radio"]:checked');
+                // Pega o nome do grupo de radio buttons para aquela pergunta (ex: 'q1', 'q2')
+                const questionName = question.querySelector('input[type="radio"]').name;
+                const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+
                 if (selectedOption) {
                     counts[selectedOption.value]++;
                 } else {
-                    allAnswered = false; // Se alguma pergunta não foi respondida, seta a flag para false
+                    allAnswered = false; // Se alguma pergunta não foi respondida
                 }
             });
 
             if (!allAnswered) {
                 alert("Por favor, responda a todas as perguntas para ver o perfil completo.");
-                return; // Impede a execução do restante da função se nem todas as perguntas foram respondidas
+                return; // Impede a execução do restante da função
             }
 
-            document.getElementById('totalA').textContent = counts.A;
-            document.getElementById('totalB').textContent = counts.B;
-            document.getElementById('totalC').textContent = counts.C;
-            document.getElementById('totalD').textContent = counts.D;
-            document.getElementById('totalE').textContent = counts.E;
+            // Atualiza a tabela de pontuação
+            for (const letter in counts) {
+                document.getElementById(totalIds[letter]).textContent = counts[letter];
+            }
 
             // Oculta todas as interpretações primeiro
             document.querySelectorAll('.interpretation-item').forEach(item => {
@@ -442,10 +435,9 @@
             });
 
             // Encontra a letra(s) com maior contagem
-            let maxCount = 0;
+            let maxCount = -1; // Começa com -1 para garantir que 0 seja maior que o inicial
             let dominantLetters = [];
-            // Itera sobre as contagens de A a E para manter a ordem se houver empate
-            const order = ['A', 'B', 'C', 'D', 'E'];
+
             order.forEach(letter => {
                 if (counts[letter] > maxCount) {
                     maxCount = counts[letter];
@@ -455,11 +447,15 @@
                 }
             });
 
+            // Se todas as contagens forem zero (o que não deve acontecer se allAnswered for true),
+            // ou se houver um empate geral de zeros (improvável com as perguntas existentes)
+            // podemos adicionar uma lógica para exibir uma mensagem padrão ou todos,
+            // mas com allAnswered = true, sempre haverá alguma contagem > 0.
+
             // Exibe apenas a(s) interpretação(ões) dominante(s)
             if (dominantLetters.length > 0) {
                 dominantLetters.forEach(letter => {
-                    const interpId = 'interp' + letter;
-                    const interpretationElement = document.getElementById(interpId);
+                    const interpretationElement = document.getElementById(interpIds[letter]);
                     if (interpretationElement) {
                         interpretationElement.style.display = 'block';
                     }
